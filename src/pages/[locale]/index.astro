@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { displayWord, LOCALES, Locale } from "@/locale";
+import { MANGA } from "@/content/manga";
+
+export function getStaticPaths() {
+  return Object.keys(LOCALES).map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+---
+
+<Layout>
+  {
+    Object.entries(MANGA).map(([key, value]) => (
+      <div>
+        <h3>{displayWord(value.name, locale)}</h3>
+        <div>{value.alias}</div>
+      </div>
+    ))
+  }
+</Layout>

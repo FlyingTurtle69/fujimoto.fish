@@ -1,0 +1,39 @@
+---
+import { LOCALES, type Locale } from "@/locale";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const locale = Astro.params.locale as Locale;
+---
+
+<div class="dropdown dropdown-end">
+  <div tabindex="0" role="button" class="btn m-1">
+    {LOCALES[locale]}
+    <svg
+      width="12px"
+      height="12px"
+      class="inline-block h-2 w-2 fill-current opacity-60"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 2048 2048"
+    >
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
+  </div>
+  <ul tabindex="-1" class="dropdown-content bg-base-300 rounded-box z-1 w-30 p-2 shadow-2xl">
+    {
+      Object.entries(LOCALES)
+        .filter(([key]) => key !== locale)
+        .map(([key, value]) => (
+          <li>
+            <a
+              type="radio"
+              name="locale-dropdown"
+              class="btn btn-sm btn-block btn-ghost w-full justify-start"
+              href={getRelativeLocaleUrl(key)}
+            >
+              {value}
+            </a>
+          </li>
+        ))
+    }
+  </ul>
+</div>

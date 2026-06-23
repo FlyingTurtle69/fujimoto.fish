@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import LocaleSelector from "@/components/LocaleSelector.astro";
 ---
 
 <!doctype html>
@@ -11,8 +12,13 @@ import "@/styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Fujimoto DB</title>
   </head>
-  <body>
-    <header>Fujimoto DB</header>
-    <slot />
+  <body class="flex h-screen flex-col">
+    <header class="navbar shadow-sm">
+      <div class="flex-1 text-xl font-bold">Fujimoto DB</div>
+      <LocaleSelector />
+    </header>
+    <div class="flex flex-1 justify-center">
+      <slot />
+    </div>
   </body>
 </html>

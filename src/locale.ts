@@ -1,6 +1,6 @@
 export const LOCALES = {
   en: "English",
-  "en-romaji": "rōmaji",
+  "en-romaji": "Rōmaji",
   jp: "日本語",
 } as const;
 

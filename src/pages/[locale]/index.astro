@@ -1,22 +1,44 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { displayWord, LOCALES, Locale } from "@/locale";
-import { MANGA } from "@/content/manga";
+import { displayWord, LOCALES } from "@/locale";
+import { MANGA, getCover } from "@/content/manga";
+import { displayAlias } from "@/content/aliases";
+import { Image } from "astro:assets";
+import { objectMap } from "@/utils/object";
 
 export function getStaticPaths() {
-  return Object.keys(LOCALES).map((locale) => ({ params: { locale } }));
+  return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
 }
 
-const locale = Astro.params.locale as Locale;
+const locale = Astro.params.locale;
 ---
 
 <Layout>
-  {
-    Object.entries(MANGA).map(([key, value]) => (
-      <div>
-        <h3>{displayWord(value.name, locale)}</h3>
-        <div>{value.alias}</div>
-      </div>
-    ))
-  }
+  <div>
+    <table class="table">
+      <tbody>
+        {
+          objectMap(MANGA, ([key, value]) => {
+            const cover = getCover(key, locale);
+            return (
+              <tr class="hover:bg-base-200">
+                <td>
+                  <a
+                    href={`/${locale}/manga/${key}`}
+                    class="absolute inset-0"
+                    aria-label={displayWord(value.name, locale)}
+                  />
+                  {cover && <Image src={cover} alt="" height={200} class="h-20 w-auto" />}
+                </td>
+                <td>
+                  <h3 class="font-bold">{displayWord(value.name, locale)}</h3>
+                  <div>{displayAlias(value.alias, locale)}</div>
+                </td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
 </Layout>

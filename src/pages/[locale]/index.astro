@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { displayWord, LOCALES } from "@/locale";
-import { MANGA, getCover } from "@/content/manga";
+import { MANGA, displayDate, getCover } from "@/content/manga";
 import { displayAlias } from "@/content/aliases";
 import { Image } from "astro:assets";
 import { objectMap } from "@/utils/object";
@@ -20,6 +20,18 @@ const locale = Astro.params.locale;
         {
           objectMap(MANGA, ([key, value]) => {
             const cover = getCover(key, locale);
+            const published =
+              value.published === "published"
+                ? "Published"
+                : value.published === "self-published"
+                  ? "Self-Published"
+                  : "Not Published";
+            const publishedStyle =
+              value.published === "published"
+                ? "badge-success"
+                : value.published === "self-published"
+                  ? "badge-warning"
+                  : "badge-error";
             return (
               <tr class="hover:bg-base-200">
                 <td>
@@ -33,6 +45,10 @@ const locale = Astro.params.locale;
                 <td>
                   <h3 class="font-bold">{displayWord(value.name, locale)}</h3>
                   <div>{displayAlias(value.alias, locale)}</div>
+                </td>
+                <td>
+                  <div class={`badge ${publishedStyle}`}>{published}</div>
+                  <div class="text-center">{displayDate(value.date, locale)}</div>
                 </td>
               </tr>
             );

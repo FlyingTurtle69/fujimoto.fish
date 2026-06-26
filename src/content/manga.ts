@@ -143,7 +143,7 @@ export const MANGA = {
     },
     published: "published",
   },
-  ningyorhapsody: {
+  ningyo: {
     name: { en: "Mermaid Rhapsody", jp: "人魚ラプソディ", "en-romaji": "Ningyo Rapusodi" },
     alias: "fujimoto",
     date: { year: 2014, month: 12, day: 19, certainty: "=" },
@@ -159,7 +159,7 @@ export const MANGA = {
     },
     published: "published",
   },
-  yogenonnayuta: {
+  nayuta: {
     name: { en: "Nayuta of the Prophecy", jp: "予言のナユタ", "en-romaji": "Yogen no Nayuta" },
     alias: "fujimoto",
     date: { year: 2015, month: 7, day: 4, certainty: "=" },
@@ -194,7 +194,7 @@ export const MANGA = {
     },
     published: "published",
   },
-  onnanokoninatteitabyou: {
+  onnanoyamai: {
     name: {
       en: "Woke-Up-as-a-Girl Syndrome",
       jp: "目が覚めたら女の子になっていた病",
@@ -214,7 +214,7 @@ export const MANGA = {
     },
     published: "published",
   },
-  imoutononee: {
+  imoutonoane: {
     name: { en: "Sisters", jp: "妹の姉", "en-romaji": "Imōto no Ane" },
     alias: "fujimoto",
     date: { year: 2018, month: 5, day: 2, certainty: "=" },
@@ -287,7 +287,7 @@ export const MANGA = {
     },
     published: "published",
   },
-  futsuu: {
+  futsuuni: {
     name: {
       en: "Just Listen to the Song",
       jp: "フツーに聞いてくれ",

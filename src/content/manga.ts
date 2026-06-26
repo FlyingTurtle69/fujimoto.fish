@@ -71,6 +71,165 @@ interface PublishedManga extends MangaBase {
 type Manga = UnpublishedManga | PublishedManga;
 
 export const MANGA = {
+  niwaniwa: {
+    name: {
+      en: "A Couple Clucking Chickens Were Still Kickin' in the Schoolyard",
+      jp: "庭には二羽ニワトリがいた。",
+      "en-romaji": "Niwa ni wa Niwa Niwatori ga Ita.",
+    },
+    alias: "fujimoto",
+    date: { year: 2011, month: 12, certainty: "=" },
+    dateProof: {
+      en: "The following websites claim it: https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8617%E2%88%9221-rsxqktseu, https://pyorumons.com/manga/tatuki-yomikiri, https://rookie.shonenjump.com/info/entry/202007_blog. Notably, the last one claiming it is one of the editors of Shonen Jump+, though he doesn't state it as absolute fact. A user here https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html says that it was 22回ジャンプスクエアSupreme Comic大賞最終候補 but according to https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#Supreme_Comic_%E5%A4%A7%E8%B3%9E, that was October not December. From this information, we can't be certain that it was from December.",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/13932016480028938623",
+    summary: {
+      jp: "2019年、宇宙人と人類の戦争が始まり、人類はあっさり敗北。ほとんどの人類は宇宙人に食べられてしまった。小学生のユウトとアミは、学校にあった鶏の着ぐるみをかぶり難を逃れた。宇宙人は二人を鶏だと勘違いしたのだ。彼らには鶏を食べる文化がないため、ユウトとアミは学校の庭で飼われることになった。そんなある日、二人に危機が訪れる。鶏を食べる習慣がある惑星から、宇宙人の転校生がやってきたのだ。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8617%E2%88%9221-rsxqktseu#SCT1",
+    },
+    published: "published",
+  },
+  sasaki: {
+    name: {
+      en: "Sasaki Stopped a Bullet",
+      jp: "佐々木くんが銃弾止めた",
+      "en-romaji": "Sasaki-kun ga Jūdan Tometa",
+    },
+    alias: "fujimoto",
+    date: { year: 2013, month: 7, certainty: "=" },
+    dateProof: {
+      en: "It won an award here https://jumpsq.shueisha.co.jp/mangasyou/crown/index05.html and that came out in July according to https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/10833519556325023328",
+    summary: {
+      jp: "男子高校生・佐々木は、担任の川口先生への憧れが行き過ぎ、川口先生を神と崇めるようになった。かつて川口先生に振られた男が拳銃を持って教室に押し入ったとき、佐々木の行動は…!?",
+    },
+    summarySource: {
+      jp: "https://jumpsq.shueisha.co.jp/mangasyou/crown/index05.html",
+    },
+    published: "published",
+  },
+  koiwamoumoku: {
+    name: { en: "Love is Blind", jp: "恋は盲目", "en-romaji": "Koi wa Mōmoku" },
+    alias: "fujimoto",
+    date: { year: 2013, month: 11, certainty: "=" },
+    dateProof: {
+      en: "It won an award here https://jumpsq.shueisha.co.jp/mangasyou/crown/index09.html and that came out in November according to https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/17107094912231080051",
+    summary: {
+      jp: "高校卒業の前日、生徒会長の伊吹は、想いを寄せるユリに告白することを決意する。しかし、地球には巨大隕石が接近していた。",
+    },
+    summarySource: {
+      jp: "https://fujimototatsuki17-26.com/story/love/",
+    },
+    published: "published",
+  },
+  shikaku: {
+    name: { en: "Shikaku", jp: "シカク", "en-romaji": "Shikaku" },
+    alias: "fujimoto",
+    date: { year: 2014, month: 6, day: 19, certainty: "=" },
+    dateProof: {
+      en: "This https://www.kinokuniya.co.jp/f/dsg-04-4910051520746 says that it was in SQ.19 Vol.14 which came out on this date according to the same page.",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/10833519556325029237",
+    summary: {
+      jp: "ある日、凄腕（すごうで）の殺し屋少女、シカクは、ユゲルという男性に呼び出される。ユゲルの依頼は彼自身を殺すことだった。躊躇（ちゅうちょ）なくユゲルの頭部を刃物で突き刺すシカク。しかしユゲルは死なない。ショットガンで頭をふっとばしても無駄だった。ユゲルは3500年を生きる、不死身の吸血鬼だったのだ。退屈して死を望んだユゲルだったが無駄だった。彼は依頼を遂行できなかったことを許し、シカクを帰す。生まれて初めて人に許容されたシカクは、ユゲルに恋をしてしまう。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8617%E2%88%9221-rsxqktseu#SCT1",
+    },
+    published: "published",
+  },
+  ningyorhapsody: {
+    name: { en: "Mermaid Rhapsody", jp: "人魚ラプソディ", "en-romaji": "Ningyo Rapusodi" },
+    alias: "fujimoto",
+    date: { year: 2014, month: 12, day: 19, certainty: "=" },
+    dateProof: {
+      en: "This article https://perry-r.hatenablog.com/entry/20141222/p7 mentions that it is from SQ.19Vol.17 which came out on this date according to https://web.archive.org/web/20141214015853/http://jumpsq.shueisha.co.jp/sq19/17.html.",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/17107094912579003163",
+    summary: {
+      jp: "海辺の街に住む中学生男子のトシヒデは、海中にある人魚が作ったピアノを弾くのが好きだった。母が人魚だったことから、トシヒデは長く海中で演奏ができる。トシヒデには母の記憶はないが、ピアノを弾いているときだけ母を思い出せるような気がするのだ。ある日、いつものようにピアノを弾いていたトシヒデは、つい時間を過ごして溺れそうになる。そこに人魚が現れ、トシヒデを救う。彼女の名はシジュ。美しい少女だった。助けてくれたお礼に、トシヒデはピアノを教えることになった。それから毎日、トシヒデとシジュは会うようになり、お互い好意を寄せるようになる。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
+    },
+    published: "published",
+  },
+  yogenonnayuta: {
+    name: { en: "Nayuta of the Prophecy", jp: "予言のナユタ", "en-romaji": "Yogen no Nayuta" },
+    alias: "fujimoto",
+    date: { year: 2015, month: 7, day: 4, certainty: "=" },
+    dateProof: {
+      en: "Listed as being in https://shonenjumpplus.com/magazine/3270296674393061999, which has this date.",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/13932016480028803599",
+    summary: {
+      jp: "両親を亡くしたケンジは、学校へもいかず、働きながら妹のナユタと二人暮らしをしていた。10年前、ツノを持つナユタが母体を貫いて生まれたとき、世界中の魔法使いが、世界を滅ぼす悪魔の子だと予言した。予言を信じる者たちは、ナユタを殺すように迫ったが、ケンジは彼女を守り抜くことを誓う。しかし、ナユタは動物を食い殺し、意味不明の漢字を羅列した言葉しか話さない。どう接すればよいのかケンジが悩んでいるうちに、ナユタの行動はますますエスカレート。近所の家畜を大量虐殺し、やがて世界滅亡を予感させるほどの魔法を繰り出した。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
+    },
+    published: "published",
+  },
+  firepunch: {
+    name: { en: "Fire Punch", jp: "ファイアパンチ", "en-romaji": "Faia Panchi" },
+    alias: "fujimoto",
+    date: { year: 2016, month: 4, day: 18, certainty: "=" },
+    dateProof: {
+      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/10833497643049550135",
+    },
+    enLink: "https://www.viz.com/shonenjump/chapters/fire-punch",
+    jpLink: "https://shonenjumpplus.com/episode/10833497643049550135",
+    summary: {
+      en: "In a frozen dystopia where inhabitants eat flesh to survive, can the destructive powers of fire bring salvation?",
+      jp: "『氷の魔女』によって世界は雪と飢餓と狂気に覆われた。凍えた民は炎を求めた…！",
+    },
+    summarySource: {
+      en: "https://www.viz.com/shonenjump/chapters/fire-punch",
+      jp: "https://shonenjumpplus.com/episode/10833497643049550135",
+    },
+    published: "published",
+  },
+  onnanokoninatteitabyou: {
+    name: {
+      en: "Woke-Up-as-a-Girl Syndrome",
+      jp: "目が覚めたら女の子になっていた病",
+      "en-romaji": "Me ga Sametara Onnanoko ni Natteita Yamai",
+    },
+    alias: "fujimoto",
+    date: { year: 2017, month: 4, day: 24, certainty: "=" },
+    dateProof: {
+      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/13932016480028864148",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/13932016480028864148",
+    summary: {
+      jp: "ある日の朝、目を覚ましたトシヒデは、自分が女の子になっていることに気づく。慌てて病院に駆け込むが、「目が覚めたら女の子になっていた病」だと診断され、治ることはないという。登校したトシヒデは、クラスメートの好奇の目にさらされ、中には「セックスさせろ」とまで言うやつもいた。クラス中から陰湿ないじめにあっていたところ、上級生のアキラが現れる。アキラはいじめを行う男子をぶん殴り、トシヒデを救う。アキラのことを異性としてカッコイイと感じたトシヒデは困ってしまう。アキラは、トシヒデの彼女、リエの兄なのだ。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
+    },
+    published: "published",
+  },
+  imoutononee: {
+    name: { en: "Sisters", jp: "妹の姉", "en-romaji": "Imōto no Ane" },
+    alias: "fujimoto",
+    date: { year: 2018, month: 5, day: 2, certainty: "=" },
+    dateProof: {
+      en: "Fujimoto said you would be able to read it on that date: https://x.com/nagayama_koharu/status/990034624561627136",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/17107094911848345887",
+    summary: {
+      jp: "美術学校3年生の江原光子は憂鬱だった。それは自分の裸が描かれた絵が、学校主催のコンクールで金賞を受賞。学校の玄関に1年間も飾られることになったからだ。作者は妹の江原杏子で、想像で姉の裸を描いたのだ。学校中の生徒に自分の裸をさらされた光子は、リベンジを画策。妹の裸を描いて金賞を狙おうとする。自宅で杏子をモデルに、絵を描き始めた光子は、久しぶりに彼女と話をする。杏子が光子の後を追い、特待生として美術学校に入学したことをきっかけに、姉妹の会話はなくなっていたのだ。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
+    },
+    published: "published",
+  },
   chainsawman: {
     name: { en: "Chainsaw Man", jp: "チェンソーマン", "en-romaji": "Chensō Man" },
     alias: "fujimoto",
@@ -87,6 +246,67 @@ export const MANGA = {
     summarySource: {
       en: "https://www.viz.com/manga-books/manga/chainsaw-man-volume-1-0/product/6419/digital",
       jp: "https://zebrack-comic.shueisha.co.jp/title/3659/volume/16828",
+    },
+    published: "published",
+  },
+  lookback: {
+    name: { en: "Look Back", jp: "ルックバック", "en-romaji": "Rukku Bakku" },
+    alias: "fujimoto",
+    date: { year: 2021, month: 7, day: 19, certainty: "=" },
+    dateProof: {
+      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/3269754496401369355",
+    },
+    enLink: "https://www.viz.com/shonenjump/chapters/look-back",
+    jpLink: "https://shonenjumpplus.com/episode/3269754496401369355",
+    summary: {
+      en: "When two students aspire to become manga artists, the paths they choose change their lives forever. From Chainsaw Man creator Tatsuki Fujimoto!",
+      jp: "学生新聞で４コマ漫画を連載している小学４年生の藤野。クラスメートからは絶賛を受けていたが、ある日、不登校の同級生・京本の４コマを載せたいと先生から告げられるが…!?",
+    },
+    summarySource: {
+      en: "https://www.viz.com/shonenjump/chapters/look-back",
+      jp: "https://shonenjumpplus.com/episode/3269754496401369355",
+    },
+    published: "published",
+  },
+  sayonaraeri: {
+    name: { en: "Goodbye, Eri", jp: "さよなら絵梨", "en-romaji": "Sayonara Eri" },
+    alias: "fujimoto",
+    date: { year: 2022, month: 4, day: 11, certainty: "=" },
+    dateProof: {
+      en: "Published date on Shonen Jump+: https://web.archive.org/web/20220410150014/https://shonenjumpplus.com/episode/3269754496858728104",
+    },
+    enLink: "https://www.viz.com/shonenjump/chapters/goodbye-eri",
+    jpLink: "https://shonenjumpplus.com/volume/4856001361007486895",
+    summary: {
+      en: "Yuta’s moviemaking career started with a request from his mother to record her final moments. After her death, Yuta meets a mysterious girl named Eri, who takes his life in new directions. The two begin creating a movie together, but Eri is harboring an explosive secret.",
+      jp: "私が死ぬまでを撮ってほしい――病の母の願いで始まった優太の映画制作。母の死後、自殺しようとした優太は謎の美少女・絵梨と出会う。2人は共同で映画を作り始めるが、絵梨はある秘密を抱えていた…。現実と創作が交錯しエクスプローションする、映画に懸けた青春物語!!",
+    },
+    summarySource: {
+      en: "https://www.amazon.com.au/Goodbye-Eri-Tatsuki-Fujimoto-ebook/dp/B0BJ5RF7B7",
+      jp: "https://shonenjumpplus.com/volume/4856001361007486895",
+    },
+    published: "published",
+  },
+  futsuu: {
+    name: {
+      en: "Just Listen to the Song",
+      jp: "フツーに聞いてくれ",
+      "en-romaji": "Futsū ni Kītekure",
+    },
+    alias: "fujimoto",
+    date: { year: 2022, month: 7, day: 4, certainty: "=" },
+    dateProof: {
+      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/3270375685315853257",
+    },
+    enLink: "https://www.viz.com/shonenjump/chapters/just-listen-to-the-song",
+    jpLink: "https://shonenjumpplus.com/episode/3270296674427724034",
+    summary: {
+      en: "A sincere love confession video goes wrong in the most unexpected way! Written by Chainsaw Man creator Tatsuki Fujimoto and drawn by To Strip the Flesh creator Oto Toda.",
+      jp: "男子高生が好きな女子高生のために告白の曲をYouTubeにアップロードし、彼女によってその動画が拡散されてしまうというストーリーです。",
+    },
+    summarySource: {
+      en: "https://www.viz.com/shonenjump/chapters/just-listen-to-the-song",
+      jp: "https://pyorumons.com/manga/tatuki-yomikiri",
     },
     published: "published",
   },

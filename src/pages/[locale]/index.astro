@@ -33,21 +33,25 @@ const locale = Astro.params.locale;
                   ? "badge-warning"
                   : "badge-error";
             return (
-              <tr class="hover:bg-base-200">
+              <tr class="hover:bg-base-200 relative">
                 <td>
                   <a
                     href={`/${locale}/manga/${key}`}
                     class="absolute inset-0"
                     aria-label={displayWord(value.name, locale)}
                   />
-                  {cover && <Image src={cover} alt="" height={200} class="h-20 w-auto" />}
+                  {cover && (
+                    <Image src={cover} alt="" height={200} class="h-20 w-auto max-w-none" />
+                  )}
                 </td>
                 <td>
                   <h3 class="font-bold">{displayWord(value.name, locale)}</h3>
                   <div>{displayAlias(value.alias, locale)}</div>
                 </td>
                 <td>
-                  <div class={`badge ${publishedStyle}`}>{published}</div>
+                  <div class="flex justify-center">
+                    <div class={`badge ${publishedStyle}`}>{published}</div>
+                  </div>
                   <div class="text-center">{displayDate(value.date, locale)}</div>
                 </td>
               </tr>

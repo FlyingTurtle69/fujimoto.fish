@@ -17,7 +17,8 @@ export function getStaticPaths() {
 }
 
 const { locale, manga } = Astro.params;
-const { name, alias, summary, summarySource, date, dateProof, jpLink, enLink, note } = MANGA[manga];
+const { name, alias, summary, summarySource, date, dateProof, jpLink, enLink, note, type } =
+  MANGA[manga];
 const cover = getCover(manga, locale);
 ---
 
@@ -28,7 +29,10 @@ const cover = getCover(manga, locale);
       <div class="flex w-full flex-col justify-center">
         <h1 class="text-primary text-2xl font-bold">{displayWord(name, locale)}</h1>
         <div class="text-secondary mt-1 mb-2 text-lg">{displayAlias(alias, locale)}</div>
-        <PublishedBadge manga={MANGA[manga]} />
+        <div class="flex gap-2">
+          <PublishedBadge manga={MANGA[manga]} />
+          <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>
+        </div>
         <div class="mt-2">{displayDate(date, locale)}</div>
 
         <div class="mt-4 flex flex-col space-y-1">

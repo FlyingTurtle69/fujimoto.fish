@@ -117,14 +117,14 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2013, month: 11, certainty: "=" },
     dateProof: {
-      en: "It won an award here https://jumpsq.shueisha.co.jp/mangasyou/crown/index09.html and that came out in November according to https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E",
+      en: "It won an award in [クラウン新人漫画賞 第9回](https://jumpsq.shueisha.co.jp/mangasyou/crown/index09.html) and that came out in November 2013 according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E).",
     },
     jpLink: "https://shonenjumpplus.com/episode/17107094912231080051",
     summary: {
-      jp: "高校卒業の前日、生徒会長の伊吹は、想いを寄せるユリに告白することを決意する。しかし、地球には巨大隕石が接近していた。",
+      jp: "高校卒業の前日。生徒会長・伊吹は決意していた。後輩であるユリに今日、告白することを。土砂降りの雨の中、想いを伝えようとする伊吹は、強盗や異星人の乱入といった一大事に対しても、「それどころではない」と自らの意思を貫こうとするが…!?",
     },
     summarySource: {
-      jp: "https://fujimototatsuki17-26.com/story/love/",
+      jp: "https://jumpsq.shueisha.co.jp/mangasyou/crown/index09.html",
     },
     published: "published",
   },

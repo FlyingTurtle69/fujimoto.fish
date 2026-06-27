@@ -2,15 +2,17 @@
 interface Props {
   href: string;
   muted?: boolean;
+  small?: boolean;
 }
 
-const { href, muted = false } = Astro.props;
+const { href, muted = false, small = false } = Astro.props;
 
 const colourClass = muted ? "text-base-content/50" : "text-accent";
+const sizeClass = small ? "text-sm" : "";
 ---
 
 <a
-  class={`${colourClass} link link-hover text-sm`}
+  class={`${colourClass} ${sizeClass} link link-hover`}
   href={href}
   target="_blank"
   rel="noopener noreferrer"

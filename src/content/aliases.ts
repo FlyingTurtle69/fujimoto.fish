@@ -6,10 +6,19 @@ export const ALIASES = {
     jp: "藤本タツキ",
     "en-romaji": "Fujimoto Tatsuki",
   },
+  fujimotohira: {
+    en: "Tatsuki Fujimoto",
+    jp: "藤本たつき",
+    "en-romaji": "Fujimoto Tatsuki",
+  },
   nagato: {
     en: "NagatoIsMe",
     jp: "長門は俺",
     "en-romaji": "NagatoWaOre",
+  },
+  nim: {
+    en: "NIM",
+    jp: "ＮＩＭ",
   },
   nagayama: {
     en: "Koharu Nagayama",

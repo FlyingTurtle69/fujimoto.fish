@@ -93,6 +93,75 @@ export const MANGA = defineRecord<Manga>()({
     },
     published: "published",
   },
+  fukushuu: {
+    name: {
+      en: "Sword of Revenge",
+      jp: "復讐の剣",
+      "en-romaji": "Fukushū no Ken",
+    },
+    alias: "nim",
+    date: { year: 2012, month: 4, certainty: "=" },
+    dateProof: {
+      en: "It was a finalist in [Supreme Comic 大賞 season II 第4回](https://web.archive.org/web/20130323045057/http://jumpsq.shueisha.co.jp/mangasyou/sc2/index04.html), which came out in April 2012 according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#Supreme_Comic_%E5%A4%A7%E8%B3%9E_season_II).",
+    },
+    summary: {
+      jp: "人類の半数を殺した２匹の魔物「レイス」と「ゼフ」。レイスと友達になったレイドだが…。",
+    },
+    summarySource: {
+      jp: "https://web.archive.org/web/20130323045057/http://jumpsq.shueisha.co.jp/mangasyou/sc2/index04.html",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "It was a finalist in [Supreme Comic 大賞 season II 第4回](https://web.archive.org/web/20130323045057/http://jumpsq.shueisha.co.jp/mangasyou/sc2/index04.html).",
+    },
+  },
+  seigi: {
+    name: {
+      en: "Sense of Justice",
+      jp: "正義の見方",
+      "en-romaji": "Seigi no Mikata",
+    },
+    alias: "fujimotohira",
+    date: { year: 2012, month: 10, certainty: "=" },
+    dateProof: {
+      en: "It was a finalist in [Supreme Comic 大賞 season II 第10回](https://web.archive.org/web/20130503012730/http://jumpsq.shueisha.co.jp/mangasyou/sc2/index10.html), which came out in October 2012 according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#Supreme_Comic_%E5%A4%A7%E8%B3%9E_season_II).",
+    },
+    summary: {
+      jp: "全ての怪物を倒し、ヒーローの仕事が無くなった世界。ペアを解散し、これからの暮らしを考える後藤と秋原だったが、かつて共に戦った元ヒーローに襲われてしまう…。",
+    },
+    summarySource: {
+      jp: "https://web.archive.org/web/20130503012730/http://jumpsq.shueisha.co.jp/mangasyou/sc2/index10.html",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "It was a finalist in [Supreme Comic 大賞 season II 第10回](https://web.archive.org/web/20130503012730/http://jumpsq.shueisha.co.jp/mangasyou/sc2/index10.html).",
+    },
+    note: {
+      en: "I wasn't able to find proof that the image I used here is actually from this manga. It's been used on [AniList](https://anilist.co/manga/128751/Seigi-no-Mikata) and [Twitter](https://x.com/MetiNTBG/status/1588775319737360384) for example, but the image is broken on the competition page.",
+    },
+  },
+  kamihikouki: {
+    name: {
+      en: "Paper Planes",
+      jp: "かみひこうき",
+      "en-romaji": "Kami Hikōki",
+    },
+    alias: "fujimoto",
+    date: { year: 2013, month: 5, certainty: "=" },
+    dateProof: {
+      en: "It won an award in [クラウン新人漫画賞 第3回](https://jumpsq.shueisha.co.jp/mangasyou/crown/index03.html) and that came out in May 2013 according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E).",
+    },
+    summary: {
+      jp: "隣同士の家に暮らすミズとシュンは、お互いの家へ紙飛行機を飛ばしあって連絡を取り合い、仲良く日常を過ごしていた。しかし、ミズの引越しと転校が決まった時、ささいな行き違いから二人は喧嘩してしまい、そのまま仲直りできず別れ別れに。やがて六年の歳月が過ぎ、二人の再会の時が…。",
+    },
+    summarySource: {
+      jp: "https://jumpsq.shueisha.co.jp/mangasyou/crown/index03.html",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "It won an award in [クラウン新人漫画賞 第3回](https://jumpsq.shueisha.co.jp/mangasyou/crown/index03.html).",
+    },
+  },
   sasaki: {
     name: {
       en: "Sasaki Stopped a Bullet",
@@ -102,7 +171,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2013, month: 7, certainty: "=" },
     dateProof: {
-      en: "It won an award in [クラウン新人漫画賞 第5回](https://jumpsq.shueisha.co.jp/mangasyou/crown/index05.html) and that came out in July according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E).",
+      en: "It won an award in [クラウン新人漫画賞 第5回](https://jumpsq.shueisha.co.jp/mangasyou/crown/index05.html) and that came out in July 2013 according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E).",
     },
     jpLink: "https://shonenjumpplus.com/episode/10833519556325023328",
     summary: {

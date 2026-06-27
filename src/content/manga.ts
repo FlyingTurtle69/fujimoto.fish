@@ -81,7 +81,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2011, month: 12, certainty: "=" },
     dateProof: {
-      en: "The following websites claim it: https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8617%E2%88%9221-rsxqktseu, https://pyorumons.com/manga/tatuki-yomikiri, https://rookie.shonenjump.com/info/entry/202007_blog. Notably, the last one claiming it is one of the editors of Shonen Jump+, though he doesn't state it as absolute fact. A user here https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html says that it was 22回ジャンプスクエアSupreme Comic大賞最終候補 but according to https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#Supreme_Comic_%E5%A4%A7%E8%B3%9E, that was October not December. From this information, we can't be certain that it was from December.",
+      en: "[Mangapedia](https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8617%E2%88%9221-rsxqktseu), [Pyorumons](https://pyorumons.com/manga/tatuki-yomikiri), and the [Shihei Lin](https://rookie.shonenjump.com/info/entry/202007_blog) claim it. Notably, the last one is one of the editors of Shonen Jump+, though he doesn't state it as absolute fact. A user on the [Neetsha bulletin board](https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html) says that it was 22回ジャンプスクエアSupreme Comic大賞最終候補 but according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#Supreme_Comic_%E5%A4%A7%E8%B3%9E), that was October not December. From this information, we can't be certain that it was from December.",
     },
     jpLink: "https://shonenjumpplus.com/episode/13932016480028938623",
     summary: {
@@ -101,7 +101,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2013, month: 7, certainty: "=" },
     dateProof: {
-      en: "It won an award here https://jumpsq.shueisha.co.jp/mangasyou/crown/index05.html and that came out in July according to https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E",
+      en: "It won an award in [クラウン新人漫画賞 第5回](https://jumpsq.shueisha.co.jp/mangasyou/crown/index05.html) and that came out in July according to [Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2#%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%B3%E6%96%B0%E4%BA%BA%E6%BC%AB%E7%94%BB%E8%B3%9E).",
     },
     jpLink: "https://shonenjumpplus.com/episode/10833519556325023328",
     summary: {
@@ -133,7 +133,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2014, month: 6, day: 19, certainty: "=" },
     dateProof: {
-      en: "This https://www.kinokuniya.co.jp/f/dsg-04-4910051520746 says that it was in SQ.19 Vol.14 which came out on this date according to the same page.",
+      en: "[Kinokuniya](https://www.kinokuniya.co.jp/f/dsg-04-4910051520746) says that it was in SQ.19 Vol.14, which came out on this date according to the same page.",
     },
     jpLink: "https://shonenjumpplus.com/episode/10833519556325029237",
     summary: {
@@ -149,7 +149,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2014, month: 12, day: 19, certainty: "=" },
     dateProof: {
-      en: "This article https://perry-r.hatenablog.com/entry/20141222/p7 mentions that it is from SQ.19Vol.17 which came out on this date according to https://web.archive.org/web/20141214015853/http://jumpsq.shueisha.co.jp/sq19/17.html.",
+      en: "[This article](https://perry-r.hatenablog.com/entry/20141222/p7) mentions that it is from SQ.19 Vol.17, which came out on this date according to the [Shonen Jump SQ.19 Vol.17 page](https://web.archive.org/web/20141214015853/http://jumpsq.shueisha.co.jp/sq19/17.html).",
     },
     jpLink: "https://shonenjumpplus.com/episode/17107094912579003163",
     summary: {
@@ -165,7 +165,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2015, month: 7, day: 4, certainty: "=" },
     dateProof: {
-      en: "Listed as being in https://shonenjumpplus.com/magazine/3270296674393061999, which has this date.",
+      en: "Listed as being in [SQ 2015年8月号](https://shonenjumpplus.com/magazine/3270296674393061999), which has this date.",
     },
     jpLink: "https://shonenjumpplus.com/episode/13932016480028803599",
     summary: {
@@ -181,7 +181,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2016, month: 4, day: 18, certainty: "=" },
     dateProof: {
-      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/10833497643049550135",
+      en: "Published date on [Shonen Jump+](https://shonenjumpplus.com/episode/10833497643049550135).",
     },
     enLink: "https://www.viz.com/shonenjump/chapters/fire-punch",
     jpLink: "https://shonenjumpplus.com/episode/10833497643049550135",
@@ -204,7 +204,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2017, month: 4, day: 24, certainty: "=" },
     dateProof: {
-      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/13932016480028864148",
+      en: "Published date on [Shonen Jump+](https://shonenjumpplus.com/episode/13932016480028864148).",
     },
     jpLink: "https://shonenjumpplus.com/episode/13932016480028864148",
     summary: {
@@ -220,7 +220,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2018, month: 5, day: 2, certainty: "=" },
     dateProof: {
-      en: "Fujimoto said you would be able to read it on that date: https://x.com/nagayama_koharu/status/990034624561627136",
+      en: "[Fujimoto said](https://x.com/nagayama_koharu/status/990034624561627136) that you would be able to read it on that date.",
     },
     jpLink: "https://shonenjumpplus.com/episode/17107094911848345887",
     summary: {
@@ -236,7 +236,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2018, month: 12, day: 3, certainty: "=" },
     dateProof: {
-      en: "This article says it: https://natalie.mu/comic/news/310548",
+      en: "[This article](https://natalie.mu/comic/news/310548) gives this date.",
     },
     enLink: "https://www.viz.com/shonenjump/chapters/chainsaw-man",
     jpLink: "https://shonenjumpplus.com/episode/10834108156650024834",
@@ -255,7 +255,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2021, month: 7, day: 19, certainty: "=" },
     dateProof: {
-      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/3269754496401369355",
+      en: "Published date on [Shonen Jump+](https://shonenjumpplus.com/episode/3269754496401369355).",
     },
     enLink: "https://www.viz.com/shonenjump/chapters/look-back",
     jpLink: "https://shonenjumpplus.com/episode/3269754496401369355",
@@ -274,7 +274,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2022, month: 4, day: 11, certainty: "=" },
     dateProof: {
-      en: "Published date on Shonen Jump+: https://web.archive.org/web/20220410150014/https://shonenjumpplus.com/episode/3269754496858728104",
+      en: "Published date on [Shonen Jump+](https://web.archive.org/web/20220410150014/https://shonenjumpplus.com/episode/3269754496858728104).",
     },
     enLink: "https://www.viz.com/shonenjump/chapters/goodbye-eri",
     jpLink: "https://shonenjumpplus.com/volume/4856001361007486895",
@@ -297,7 +297,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "fujimoto",
     date: { year: 2022, month: 7, day: 4, certainty: "=" },
     dateProof: {
-      en: "Published date on Shonen Jump+: https://shonenjumpplus.com/episode/3270375685315853257",
+      en: "Published date on [Shonen Jump+](https://shonenjumpplus.com/episode/3270375685315853257).",
     },
     enLink: "https://www.viz.com/shonenjump/chapters/just-listen-to-the-song",
     jpLink: "https://shonenjumpplus.com/episode/3270296674427724034",

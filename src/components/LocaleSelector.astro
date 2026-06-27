@@ -3,6 +3,8 @@ import { LOCALES, type Locale } from "@/locale";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const locale = Astro.params.locale as Locale;
+const currentPath = Astro.url.pathname.replace(`/${locale}`, "") || "/";
+const localeHref = (newLocale: string) => getRelativeLocaleUrl(newLocale, currentPath);
 ---
 
 <div class="dropdown dropdown-end">
@@ -28,7 +30,7 @@ const locale = Astro.params.locale as Locale;
               type="radio"
               name="locale-dropdown"
               class="btn btn-sm btn-block btn-ghost w-full justify-start"
-              href={getRelativeLocaleUrl(key)}
+              href={localeHref(key)}
             >
               {value}
             </a>

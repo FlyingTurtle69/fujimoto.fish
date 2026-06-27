@@ -68,7 +68,7 @@ interface PublishedManga extends MangaBase {
   published: "published" | "self-published";
 }
 
-type Manga = UnpublishedManga | PublishedManga;
+export type Manga = UnpublishedManga | PublishedManga;
 
 export const MANGA = {
   niwaniwa: {

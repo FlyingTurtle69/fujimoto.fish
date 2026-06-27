@@ -5,6 +5,7 @@ import { MANGA, displayDate, getCover } from "@/content/manga";
 import { displayAlias } from "@/content/aliases";
 import { Image } from "astro:assets";
 import { objectMap } from "@/utils/object";
+import PublishedBadge from "@/components/PublishedBadge.astro";
 
 export function getStaticPaths() {
   return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
@@ -20,20 +21,8 @@ const locale = Astro.params.locale;
         {
           objectMap(MANGA, ([key, value]) => {
             const cover = getCover(key, locale);
-            const published =
-              value.published === "published"
-                ? "Published"
-                : value.published === "self-published"
-                  ? "Self-Published"
-                  : "Not Published";
-            const publishedStyle =
-              value.published === "published"
-                ? "badge-success"
-                : value.published === "self-published"
-                  ? "badge-warning"
-                  : "badge-error";
             return (
-              <tr class="hover:bg-base-200 relative">
+              <tr class="hover:bg-base-300 relative">
                 <td>
                   <a
                     href={`/${locale}/manga/${key}`}
@@ -50,7 +39,7 @@ const locale = Astro.params.locale;
                 </td>
                 <td>
                   <div class="flex justify-center">
-                    <div class={`badge ${publishedStyle}`}>{published}</div>
+                    <PublishedBadge manga={value} />
                   </div>
                   <div class="text-center">{displayDate(value.date, locale)}</div>
                 </td>

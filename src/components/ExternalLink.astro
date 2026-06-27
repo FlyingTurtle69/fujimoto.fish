@@ -1,0 +1,26 @@
+---
+interface Props {
+  href: string;
+  muted?: boolean;
+}
+
+const { href, muted = false } = Astro.props;
+
+const colourClass = muted ? "text-base-content/50" : "text-accent";
+---
+
+<a class={`${colourClass} link link-hover text-sm`} href={href} target="_blank">
+  <slot />
+  <svg
+    aria-hidden="true"
+    class="mb-0.5 ml-0.5 inline-block size-3"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path d="M15 3h6v6"></path>
+    <path d="M10 14 21 3"></path>
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+  </svg>
+</a>

@@ -1,6 +1,10 @@
 ---
 import "@/styles/global.css";
 import LocaleSelector from "@/components/LocaleSelector.astro";
+import type { Locale } from "@/locale";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const locale = Astro.params.locale as Locale;
 ---
 
 <!doctype html>
@@ -14,10 +18,10 @@ import LocaleSelector from "@/components/LocaleSelector.astro";
   </head>
   <body class="flex h-screen flex-col">
     <header class="navbar shadow-sm">
-      <div class="flex-1 text-xl font-bold">Fujimoto DB</div>
+      <a href={getRelativeLocaleUrl(locale)} class="flex-1 text-xl font-bold">Fujimoto DB</a>
       <LocaleSelector />
     </header>
-    <div class="flex flex-1 justify-center">
+    <div class="bg-base-200 flex flex-1 justify-center sm:py-2">
       <slot />
     </div>
   </body>

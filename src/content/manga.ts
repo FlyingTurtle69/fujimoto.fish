@@ -58,6 +58,7 @@ interface MangaBase {
   jpLink?: string;
   summary?: Word;
   summarySource?: Word;
+  note?: Word;
 }
 
 interface UnpublishedManga extends MangaBase {
@@ -194,6 +195,25 @@ export const MANGA = defineRecord<Manga>()({
       jp: "https://shonenjumpplus.com/episode/10833497643049550135",
     },
     published: "published",
+  },
+  oniichan: {
+    name: {
+      en: "A Manga My Brother Drew in His Free Time",
+      jp: "お兄ちゃんが暇の時に書いた漫画",
+      "en-romaji": "Onīchan ga Hima no Toki ni Kaita Manga",
+    },
+    alias: "nagayama",
+    date: { year: 2017, month: 2, day: 8, certainty: "=" },
+    dateProof: {
+      en: "It's the date of the [tweet](https://x.com/nagayama_koharu/status/829177667073118210) that this was posted in.",
+    },
+    jpLink: "https://x.com/nagayama_koharu/status/829177667073118210",
+    enLink:
+      "https://www.reddit.com/r/Chainsawfolk/comments/1iqpbjq/english_translation_of_fujimotos_unpublished_manga",
+    published: "self-published",
+    note: {
+      en: 'I don\'t think there is an official name for this. The name I chose here is based off of the caption of the tweet this was posted in. The caption was "This is a manga my brother drew in his free time."',
+    },
   },
   onnanoyamai: {
     name: {

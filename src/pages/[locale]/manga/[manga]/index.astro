@@ -17,7 +17,7 @@ export function getStaticPaths() {
 }
 
 const { locale, manga } = Astro.params;
-const { name, alias, summary, summarySource, date, dateProof, jpLink, enLink } = MANGA[manga];
+const { name, alias, summary, summarySource, date, dateProof, jpLink, enLink, note } = MANGA[manga];
 const cover = getCover(manga, locale);
 ---
 
@@ -67,5 +67,14 @@ const cover = getCover(manga, locale);
       <h2 class="text-lg font-semibold">Proof of Date</h2>
       <Markdown content={displayWord(dateProof, locale)} components={{ a: ExternalLink }} />
     </div>
+
+    {
+      note && (
+        <div>
+          <h2 class="text-lg font-semibold">Note</h2>
+          <p>{displayWord(note, locale)}</p>
+        </div>
+      )
+    }
   </main>
 </Layout>

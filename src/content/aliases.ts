@@ -11,6 +11,11 @@ export const ALIASES = {
     jp: "長門は俺",
     "en-romaji": "NagatoWaOre",
   },
+  nagayama: {
+    en: "Koharu Nagayama",
+    jp: "ながやま　こはる",
+    "en-romaji": "Nagayama Koharu",
+  },
 } as const satisfies Record<string, Word>;
 
 export type Alias = keyof typeof ALIASES;

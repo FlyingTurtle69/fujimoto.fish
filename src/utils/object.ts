@@ -12,3 +12,7 @@ export function objectMap<T extends object, U>(
 ) {
   return objectEntries(object).map(callbackfn);
 }
+
+export function defineRecord<V>() {
+  return <K extends string>(record: Record<K, V>): Record<K, V> => record;
+}

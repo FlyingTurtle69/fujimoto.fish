@@ -1,5 +1,6 @@
 import type { Locale, Word } from "@/locale";
 import type { Alias } from "./aliases";
+import { defineRecord } from "@/utils/object";
 
 interface ReleaseDate {
   year: number;
@@ -70,7 +71,7 @@ interface PublishedManga extends MangaBase {
 
 export type Manga = UnpublishedManga | PublishedManga;
 
-export const MANGA = {
+export const MANGA = defineRecord<Manga>()({
   niwaniwa: {
     name: {
       en: "A Couple Clucking Chickens Were Still Kickin' in the Schoolyard",
@@ -310,7 +311,7 @@ export const MANGA = {
     },
     published: "published",
   },
-} as const satisfies Record<string, Manga>;
+});
 
 type MangaId = keyof typeof MANGA;
 

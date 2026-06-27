@@ -31,16 +31,24 @@ const cover = getCover(manga, locale);
         <div class="mt-2">{displayDate(date, locale)}</div>
 
         <div class="mt-4 flex flex-col space-y-1">
-          <ExternalLink href={jpLink}>Read in Japanese</ExternalLink>
-          <ExternalLink href={enLink}>Read in English</ExternalLink>
+          {jpLink && <ExternalLink href={jpLink}>Read in Japanese</ExternalLink>}
+          {enLink && <ExternalLink href={enLink}>Read in English</ExternalLink>}
         </div>
       </div>
     </div>
 
-    <div>
-      <p>{displayWord(summary, locale)}</p>
-      <ExternalLink href={displayWord(summarySource, locale)} muted>Source</ExternalLink>
-    </div>
+    {
+      summary && (
+        <div>
+          <p>{displayWord(summary, locale)}</p>
+          {summarySource && (
+            <ExternalLink href={displayWord(summarySource, locale)} muted>
+              Source
+            </ExternalLink>
+          )}
+        </div>
+      )
+    }
 
     <div>
       <h2 class="text-lg font-semibold">Proof of Date</h2>

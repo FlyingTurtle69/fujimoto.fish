@@ -74,6 +74,84 @@ interface PublishedManga extends MangaBase {
 export type Manga = UnpublishedManga | PublishedManga;
 
 export const MANGA = defineRecord<Manga>()({
+  densetsu: {
+    name: {
+      en: "Legend of the Hero of the Legend of the Hero of the Legend",
+      jp: "伝説の勇者の伝説の勇者の伝説",
+      "en-romaji": "Densetsu no Yūsha no Densetsu no Yūsha no Densetsu",
+    },
+    alias: "nagato",
+    type: "one-shot",
+    date: { year: 2011, month: 5, day: 24, certainty: "=" },
+    dateProof: {
+      en: "It says the date on the [site](https://neetsha.jp/inside/comic.php?id=10915) it was posted on.",
+    },
+    jpLink: "https://neetsha.jp/inside/comic.php?id=10915",
+    enLink:
+      "https://www.reddit.com/r/Chainsawfolk/comments/1ia9xjj/english_translation_of_fujimotos_early_oneshot/",
+    published: "self-published",
+  },
+  tettereposannu: {
+    name: {
+      en: "Tetteleposan",
+      jp: "テッテレポサンヌ",
+      "en-romaji": "Tettereposannu",
+    },
+    alias: "nagato",
+    type: "series",
+    date: { year: 2011, month: 7, day: 16, certainty: "=" },
+    dateProof: {
+      en: "The modified date of the image files of the first chapter, such as [this one](http://nagatoisme.web.fc2.com/r001.jpg), have a modified date of July 16, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://neetsha.jp/oekaki/log/?bbs=5&res=2632) dated 16 July 2011, so it has to be at least as old as that. Additionally, [AniList](https://anilist.co/manga/133945/Tetteleposan) claims that it started in July 2011.",
+    },
+    jpLink: "http://nagatoisme.web.fc2.com/tetteretop.html",
+    enLink: "https://mangadex.org/title/bc782a9e-f0bf-4bcc-ac26-d0f8c215bbe7/tetteleposan",
+    summary: {
+      en: 'A little girl in a frozen world approaches a strange, yet benevolent creature for help. But when all she can say is the nonsense word "Tetteleposan", how can he help her?',
+    },
+    summarySource: {
+      en: "https://anilist.co/manga/133945/Tetteleposan",
+    },
+    published: "self-published",
+  },
+  mahoujo: {
+    name: {
+      en: "Girl-Wizard-Maid in a School Swimsuit with Cat Ears and Double Mecha Pigtails Kanade",
+      jp: "ネコミミメイドスクミズメカツインテールまほうしょうじょカナデ",
+      "en-romaji": "Nekomimimeidosukumizumekatsuintērumahōshōjo Kanade",
+    },
+    alias: "nagato",
+    type: "one-shot",
+    date: { year: 2011, month: 9, day: 11, certainty: "=" },
+    dateProof: {
+      en: "The modified date of the image files, such as [this one](http://nagatoisme.web.fc2.com/ma01.jpg), have a modified date of September 11, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+    },
+    jpLink: "http://nagatoisme.web.fc2.com/mahoutop.html",
+    enLink: "https://www.reddit.com/r/Chainsawfolk/comments/1i9tofs/an_early_oneshot_of_fujimoto/",
+    published: "self-published",
+  },
+  dejimon: {
+    name: {
+      en: "Dejimon",
+      jp: "デジモン",
+      "en-romaji": "Dejimon",
+    },
+    alias: "nagato",
+    type: "one-shot",
+    date: { year: 2011, month: 11, day: 3, certainty: "=" },
+    dateProof: {
+      en: "The modified date of the image files, such as [this one](http://nagatoisme.web.fc2.com/de01.jpg), have a modified date of November 3, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+    },
+    jpLink: "http://nagatoisme.web.fc2.com/dezimontop.html",
+    enLink:
+      "https://www.reddit.com/r/Chainsawfolk/comments/1iage3m/english_translation_of_fujimotos_early/",
+    summary: {
+      en: "A self-published oneshot by Tatsuki Fujimoto from 2011 about a meteorite and an angel.",
+    },
+    summarySource: {
+      en: "https://mangadex.org/title/77fe6719-b360-45fb-ad4d-7d1e7200649f/dezimon",
+    },
+    published: "self-published",
+  },
   niwaniwa: {
     name: {
       en: "A Couple Clucking Chickens Were Still Kickin' in the Schoolyard",

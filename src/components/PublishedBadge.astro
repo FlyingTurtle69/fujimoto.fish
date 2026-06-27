@@ -3,9 +3,10 @@ import type { Manga } from "@/content/manga";
 
 interface Props {
   manga: Manga;
+  className?: string;
 }
 
-const { manga } = Astro.props;
+const { manga, className = "" } = Astro.props;
 const { published } = manga;
 
 const TEXT = {
@@ -21,4 +22,4 @@ const CLASS = {
 } as const;
 ---
 
-<div class={`badge ${CLASS[published]}`}>{TEXT[published]}</div>
+<div class={`badge ${CLASS[published]} ${className}`}>{TEXT[published]}</div>

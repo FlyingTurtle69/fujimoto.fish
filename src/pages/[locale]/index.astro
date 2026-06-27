@@ -39,7 +39,7 @@ const locale = Astro.params.locale;
                 </td>
                 <td>
                   <div class="flex justify-center">
-                    <PublishedBadge manga={value} />
+                    <PublishedBadge manga={value} className="max-md:text-sm max-lg:h-auto" />
                   </div>
                   <div class="text-center">{displayDate(value.date, locale)}</div>
                 </td>

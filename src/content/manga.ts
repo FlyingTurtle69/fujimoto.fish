@@ -74,6 +74,36 @@ interface PublishedManga extends MangaBase {
 export type Manga = UnpublishedManga | PublishedManga;
 
 export const MANGA = defineRecord<Manga>()({
+  murige: {
+    name: {
+      en: "Impossible Game",
+      jp: "ムリゲー",
+      "en-romaji": "Murigē",
+    },
+    alias: "nagato",
+    type: "series",
+    date: { year: 2010, month: 2, day: 8, certainty: "=" },
+    dateProof: {
+      en: "The modified date of the image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/1.jpg), have a modified date of February 8, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=15790) dated 18 February 2010, so it must have been public before then.",
+    },
+    jpLink: "http://namakuriimu.web.fc2.com/",
+    published: "self-published",
+  },
+  kankeri: {
+    name: {
+      en: "Warship Kick",
+      jp: "艦蹴り",
+      "en-romaji": "Kan Keri",
+    },
+    alias: "nagato",
+    type: "series",
+    date: { year: 2010, month: 8, day: 3, certainty: "=" },
+    dateProof: {
+      en: "The modified date of the image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/0000.jpg), have a modified date of August 3, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=20150) dated 7 August 2010, so it must have been public before then.",
+    },
+    jpLink: "http://namakuriimu.web.fc2.com/0000index.html",
+    published: "self-published",
+  },
   densetsu: {
     name: {
       en: "Legend of the Hero of the Legend of the Hero of the Legend",
@@ -89,6 +119,21 @@ export const MANGA = defineRecord<Manga>()({
     jpLink: "https://neetsha.jp/inside/comic.php?id=10915",
     enLink:
       "https://www.reddit.com/r/Chainsawfolk/comments/1ia9xjj/english_translation_of_fujimotos_early_oneshot/",
+    published: "self-published",
+  },
+  uchuuonna: {
+    name: {
+      en: "Appearance of a Giant Girl in Space",
+      jp: "宇宙に巨大女の子出現",
+      "en-romaji": "Uchū ni Kyodai Onnanoko Shutsugen",
+    },
+    alias: "nagato",
+    type: "one-shot",
+    date: { year: 2011, month: 6, day: 5, certainty: "=" },
+    dateProof: {
+      en: "The modified date of the image files, such as [this one](http://nagatohaore.web.fc2.com/001.jpg), have a modified date of June 5, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+    },
+    jpLink: "http://nagatohaore.web.fc2.com/01.htm",
     published: "self-published",
   },
   tettereposannu: {

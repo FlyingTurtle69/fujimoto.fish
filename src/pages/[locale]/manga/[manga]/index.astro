@@ -31,7 +31,11 @@ const cover = getCover(manga, locale);
         <div class="text-secondary mt-1 mb-2 text-lg">{displayAlias(alias, locale)}</div>
         <div class="flex gap-2">
           <PublishedBadge manga={MANGA[manga]} />
-          <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>
+          {
+            type && (
+              <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>
+            )
+          }
         </div>
         <div class="mt-2">{displayDate(date, locale)}</div>
 

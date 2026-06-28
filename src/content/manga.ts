@@ -52,7 +52,7 @@ export function displayDate({ year, month, day, certainty }: ReleaseDate, locale
 interface MangaBase {
   name: Word;
   alias: Alias;
-  type: "one-shot" | "series";
+  type?: "one-shot" | "series";
   date: ReleaseDate; // Date first chapter published or other main date
   dateProof: Word;
   enLink?: string;
@@ -84,7 +84,7 @@ export const MANGA = defineRecord<Manga>()({
     type: "series",
     date: { year: 2010, month: 2, day: 8, certainty: "=" },
     dateProof: {
-      en: "The modified date of the image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/1.jpg), have a modified date of February 8, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=15790) dated 18 February 2010, so it must have been public before then.",
+      en: "The image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/1.jpg), have a modified date of February 8, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=15790) dated 18 February 2010, so it must have been public before then.",
     },
     jpLink: "http://namakuriimu.web.fc2.com/",
     published: "self-published",
@@ -99,10 +99,79 @@ export const MANGA = defineRecord<Manga>()({
     type: "series",
     date: { year: 2010, month: 8, day: 3, certainty: "=" },
     dateProof: {
-      en: "The modified date of the image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/0000.jpg), have a modified date of August 3, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=20150) dated 7 August 2010, so it must have been public before then.",
+      en: "The image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/0000.jpg), have a modified date of August 3, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=20150) dated 7 August 2010, so it must have been public before then.",
     },
     jpLink: "http://namakuriimu.web.fc2.com/0000index.html",
     published: "self-published",
+  },
+  pasokon: {
+    name: {
+      en: "PC and Her",
+      jp: "パソコンと彼女",
+      "en-romaji": "Pasokon to Kanojo",
+    },
+    alias: "nagato",
+    type: "series",
+    date: { year: 2010, month: 9, day: 14, certainty: "=" },
+    dateProof: {
+      en: "The image files of pages 1 to 6 of the first chapter have a modified date of 13 August 2010, whereas pages 7 to [11](http://namakuriimu.web.fc2.com/t011.jpg) have a modified date of 14 September. I decided to use the latter date because I thought that maybe Fujimoto didn't release the first chapter until all the pages were complete.",
+    },
+    jpLink: "http://namakuriimu.web.fc2.com/t1.html",
+    published: "self-published",
+  },
+  sayonaraheaven: {
+    name: {
+      en: "Goodbye Heaven",
+      jp: "サヨナラヘヴン",
+      "en-romaji": "Sayonara Hevun",
+    },
+    alias: "nagato",
+    type: "one-shot",
+    date: { year: 2010, month: 11, day: 7, certainty: "=" },
+    dateProof: {
+      en: "The image files of the manga, such as [this one](http://namakuriimu.web.fc2.com/koi1.jpg), have a modified date of November 7, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+    },
+    jpLink: "http://namakuriimu.web.fc2.com/koi1.html",
+    published: "self-published",
+  },
+  ashitasen: {
+    name: {
+      en: "Tomorrow War",
+      jp: "明日戦",
+      "en-romaji": "Ashitasen",
+    },
+    alias: "nagato",
+    date: { year: 2011, certainty: "?" },
+    dateProof: {
+      en: "The manga that we know the dates of on [this page](http://nagatoisme.web.fc2.com/sonota.html) appear to be in chronological order. If the ones we don't know the dates of are as well, then that would mean this manga came out in late 2010 or early 2011.",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "It's listed on [one of Fujimoto's websites](http://nagatoisme.web.fc2.com/sonota.html). Unfortunately, the link to it is now dead.",
+    },
+    note: {
+      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.",
+      "en-romaji":
+        "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nI'm very unsure if the rōmaji of the title is correct.",
+    },
+  },
+  ac: {
+    name: {
+      en: "AC",
+      jp: "ＡＣ",
+    },
+    alias: "nagato",
+    date: { year: 2011, certainty: "?" },
+    dateProof: {
+      en: "The manga that we know the dates of on [this page](http://nagatoisme.web.fc2.com/sonota.html) appear to be in chronological order. If the ones we don't know the dates of are as well, then that would mean this manga came out in late 2010 or early 2011.",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "It's listed on [one of Fujimoto's websites](http://nagatoisme.web.fc2.com/sonota.html). Unfortunately, the link to it is now dead.",
+    },
+    note: {
+      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.",
+    },
   },
   densetsu: {
     name: {
@@ -131,7 +200,7 @@ export const MANGA = defineRecord<Manga>()({
     type: "one-shot",
     date: { year: 2011, month: 6, day: 5, certainty: "=" },
     dateProof: {
-      en: "The modified date of the image files, such as [this one](http://nagatohaore.web.fc2.com/001.jpg), have a modified date of June 5, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+      en: "The image files of the manga, such as [this one](http://nagatohaore.web.fc2.com/001.jpg), have a modified date of June 5, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
     },
     jpLink: "http://nagatohaore.web.fc2.com/01.htm",
     published: "self-published",
@@ -146,7 +215,7 @@ export const MANGA = defineRecord<Manga>()({
     type: "series",
     date: { year: 2011, month: 7, day: 16, certainty: "=" },
     dateProof: {
-      en: "The modified date of the image files of the first chapter, such as [this one](http://nagatoisme.web.fc2.com/r001.jpg), have a modified date of July 16, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://neetsha.jp/oekaki/log/?bbs=5&res=2632) dated 16 July 2011, so it has to be at least as old as that. Additionally, [AniList](https://anilist.co/manga/133945/Tetteleposan) claims that it started in July 2011.",
+      en: "The image files of the first chapter, such as [this one](http://nagatoisme.web.fc2.com/r001.jpg), have a modified date of July 16, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://neetsha.jp/oekaki/log/?bbs=5&res=2632) dated 16 July 2011, so it has to be at least as old as that. Additionally, [AniList](https://anilist.co/manga/133945/Tetteleposan) claims that it started in July 2011.",
     },
     jpLink: "http://nagatoisme.web.fc2.com/tetteretop.html",
     enLink: "https://mangadex.org/title/bc782a9e-f0bf-4bcc-ac26-d0f8c215bbe7/tetteleposan",
@@ -168,7 +237,7 @@ export const MANGA = defineRecord<Manga>()({
     type: "one-shot",
     date: { year: 2011, month: 9, day: 11, certainty: "=" },
     dateProof: {
-      en: "The modified date of the image files, such as [this one](http://nagatoisme.web.fc2.com/ma01.jpg), have a modified date of September 11, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+      en: "The image files of the manga, such as [this one](http://nagatoisme.web.fc2.com/ma01.jpg), have a modified date of September 11, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
     },
     jpLink: "http://nagatoisme.web.fc2.com/mahoutop.html",
     enLink: "https://www.reddit.com/r/Chainsawfolk/comments/1i9tofs/an_early_oneshot_of_fujimoto/",
@@ -184,7 +253,7 @@ export const MANGA = defineRecord<Manga>()({
     type: "one-shot",
     date: { year: 2011, month: 11, day: 3, certainty: "=" },
     dateProof: {
-      en: "The modified date of the image files, such as [this one](http://nagatoisme.web.fc2.com/de01.jpg), have a modified date of November 3, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+      en: "The image files of the manga, such as [this one](http://nagatoisme.web.fc2.com/de01.jpg), have a modified date of November 3, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
     },
     jpLink: "http://nagatoisme.web.fc2.com/dezimontop.html",
     enLink:

@@ -6,7 +6,7 @@ interface ReleaseDate {
   year: number;
   month?: number; // using 1 as January
   day?: number;
-  certainty: "=" | "<" | "?";
+  certainty: "=" | "?";
 }
 
 const ENG_MONTHS = [
@@ -25,7 +25,7 @@ const ENG_MONTHS = [
 ];
 
 export function displayDate({ year, month, day, certainty }: ReleaseDate, locale: Locale) {
-  let result = certainty === "<" ? "<" : "";
+  let result = "";
   if (locale === "jp") {
     result += `${year}年`;
     if (month) {
@@ -89,6 +89,18 @@ export const MANGA = defineRecord<Manga>()({
     jpLink: "http://namakuriimu.web.fc2.com/",
     published: "self-published",
   },
+  pantz: {
+    name: { jp: "PANTZ" },
+    alias: "nagato",
+    date: { year: 2010, certainty: "?" },
+    dateProof: {
+      en: "[This](https://www.google.com/search?q=%22%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E7%A7%81%E3%81%AF%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%22&sxsrf=APpeQntRoLJO1Ri7V3DVhSRlOEL6240f_Q%3A1781972411206) Google search has the following snippet from the NeetshaWiki page for NagatoIsMe: 「長門は俺は新都社のヤング作家・少年作家・コニー作家。 作品. ムリゲー(完結) PANTZ(完結) 艦蹴り(完結) それでも私はレビューを始めるのだろう」. This is listing _Impossible Game_, _PANTZ_, _Warship Kick_ and _Even so, I Suppose I'll Start the Review_ as works that NagatoIsMe made. Besides PANTZ, these are all in chronological order. If we assume that PANTZ is also ordered chronologically, then it must have been made in 2010, sometime between February and August.\n\nThis [comment](https://neetsha.jp/inside/comment.php?id=10915&limit=1000#comment_410448) asking why PANTZ was deleted was posted on 26 May 2011, so at the very least we know it must have been older than that.",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "It appears in [this](https://www.google.com/search?q=%22%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E7%A7%81%E3%81%AF%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%22&sxsrf=APpeQntRoLJO1Ri7V3DVhSRlOEL6240f_Q%3A1781972411206) Google search snippet for the NeetshaWiki page for NagatoIsMe, listing works by him. Unfortunately, the original page no longer exists. There is also a comment [here](https://neetsha.jp/inside/comment.php?id=10915&limit=1000#comment_410448) asking why PANTZ was deleted.",
+    },
+  },
   kankeri: {
     name: {
       en: "Warship Kick",
@@ -117,6 +129,21 @@ export const MANGA = defineRecord<Manga>()({
       en: "The image files of pages 1 to 6 of the first chapter have a modified date of 13 August 2010, whereas pages 7 to [11](http://namakuriimu.web.fc2.com/t011.jpg) have a modified date of 14 September. I decided to use the latter date because I thought that maybe Fujimoto didn't release the first chapter until all the pages were complete.",
     },
     jpLink: "http://namakuriimu.web.fc2.com/t1.html",
+    published: "self-published",
+  },
+  review: {
+    name: {
+      en: "Even so, I Suppose I'll Start the Review",
+      jp: "それでも私はレビューを始めるのだろう",
+      "en-romaji": "Soredemo Watashi wa Rebyū o Hajimeru no darō",
+    },
+    alias: "nagato",
+    type: "series",
+    date: { year: 2010, month: 10, day: 16, certainty: "=" },
+    dateProof: {
+      en: "The image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/re001.jpg), have a modified date of October 16, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
+    },
+    jpLink: "http://namakuriimu.web.fc2.com/reindex.html",
     published: "self-published",
   },
   sayonaraheaven: {

@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { ALIASES } from "@/content/aliases";
+import { getStaticPaths as getLocalPaths } from "@/pages/[locale]/index.astro";
+import { objectKeys, objectMap } from "@/utils/object";
+import { displayWord } from "@/locale";
+import { MANGA } from "@/content/manga";
+import MangaList from "@/components/MangaList.astro";
+import MarkdownSection from "@/components/MarkdownSection.astro";
+
+export function getStaticPaths() {
+  return getLocalPaths().flatMap(({ params: { locale } }) =>
+    objectMap(ALIASES, ([alias]) => ({ params: { locale, alias } })),
+  );
+}
+
+const { locale, alias } = Astro.params;
+const { name, description, fujimotoProof } = ALIASES[alias];
+
+const manga = objectKeys(MANGA).filter((m) => MANGA[m].alias === alias);
+---
+
+<Layout>
+  <main class="max-w-4xl space-y-4 p-2">
+    <h1 class="text-secondary text-center text-3xl font-bold">{displayWord(name, locale)}</h1>
+    {description && <p>{displayWord(description, locale)}</p>}
+    <MarkdownSection heading="Proof of being Fujimoto" text={fujimotoProof} locale={locale} />
+    <MangaList manga={manga} locale={locale} />
+  </main>
+</Layout>

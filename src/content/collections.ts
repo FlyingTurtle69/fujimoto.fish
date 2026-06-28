@@ -1,11 +1,11 @@
 import type { Word } from "@/locale";
-import type { Alias } from "./aliases";
+import type { AliasId } from "./aliases";
 import type { MangaId } from "./manga";
 import { defineRecord } from "@/utils/object";
 
 interface Collection {
   name: Word;
-  alias: Alias;
+  alias: AliasId;
   jpLink?: string;
   enLink?: string;
   manga: MangaId[];

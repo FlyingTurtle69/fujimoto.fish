@@ -1,5 +1,4 @@
 ---
-import { Markdown } from "astro-remote";
 import Layout from "@/layouts/Layout.astro";
 import { getStaticPaths as getLocalPaths } from "@/pages/[locale]/index.astro";
 import { displayWord } from "@/locale";
@@ -9,6 +8,7 @@ import PublishedBadge from "@/components/PublishedBadge.astro";
 import ExternalLink from "@/components/ExternalLink.astro";
 import Overview from "@/components/Overview.astro";
 import { COLLECTIONS } from "@/content/collections";
+import MarkdownSection from "@/components/MarkdownSection.astro";
 
 export function getStaticPaths() {
   return getLocalPaths().flatMap(({ params: { locale } }) =>
@@ -58,30 +58,12 @@ const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].mang
       )
     }
 
-    <div>
-      <h2 class="text-lg font-semibold">Proof of Date</h2>
-      <Markdown content={displayWord(dateProof, locale)} components={{ a: ExternalLink }} />
-    </div>
-
-    {
-      thisManga.published === "unpublished" && (
-        <div>
-          <h2 class="text-lg font-semibold">Proof of Existence</h2>
-          <Markdown
-            content={displayWord(thisManga.existenceProof, locale)}
-            components={{ a: ExternalLink }}
-          />
-        </div>
-      )
-    }
-
-    {
-      note && (
-        <div>
-          <h2 class="text-lg font-semibold">Note</h2>
-          <Markdown content={displayWord(note, locale)} components={{ a: ExternalLink }} />
-        </div>
-      )
-    }
+    <MarkdownSection heading="Proof of Date" text={dateProof} locale={locale} />
+    <MarkdownSection
+      heading="Proof of Existence"
+      text={thisManga.published === "unpublished" ? thisManga.existenceProof : undefined}
+      locale={locale}
+    />
+    <MarkdownSection heading="Note" text={note} locale={locale} />
   </main>
 </Layout>

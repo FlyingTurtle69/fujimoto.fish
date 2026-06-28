@@ -1,5 +1,5 @@
 import type { Locale, Word } from "@/locale";
-import type { Alias } from "./aliases";
+import type { AliasId } from "./aliases";
 import { defineRecord } from "@/utils/object";
 
 interface ReleaseDate {
@@ -51,7 +51,7 @@ export function displayDate({ year, month, day, certainty }: ReleaseDate, locale
 
 interface MangaBase {
   name: Word;
-  alias: Alias;
+  alias: AliasId;
   type?: "one-shot" | "series";
   date: ReleaseDate; // Date first chapter published or other main date
   dateProof: Word;
@@ -88,6 +88,15 @@ export const MANGA = defineRecord<Manga>()({
     },
     jpLink: "http://namakuriimu.web.fc2.com/",
     published: "self-published",
+    summary: {
+      jp: "突然、手や足や目などがなくなった男！「ほしいものみっついえ」「リストは、手、足、鼻、飯・・・」「ムリゲーへようこそ!!」",
+    },
+    summarySource: {
+      jp: "https://www.shonenjump.com/jisedai_manga/publication.html",
+    },
+    note: {
+      en: "This won the first [JUMP Next Generation Grand Prix](https://www.shonenjump.com/jisedai_manga/publication.html).",
+    },
   },
   pantz: {
     name: { jp: "PANTZ" },

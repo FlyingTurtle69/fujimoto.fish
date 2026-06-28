@@ -14,7 +14,7 @@ const { heading, text, locale } = Astro.props;
 
 {
   text && (
-    <section>
+    <section class="[&_ol]:list-inside [&_ol]:list-decimal">
       <h2 class="text-lg font-semibold">{heading}</h2>
       <Markdown content={displayWord(text, locale)} components={{ a: ExternalLink }} />
     </section>

@@ -1,0 +1,50 @@
+---
+import { displayAlias } from "@/content/aliases";
+import { displayDate, MANGA, type MangaId } from "@/content/manga";
+import { displayWord, type Locale } from "@/locale";
+import { getCover } from "@/utils/image";
+import { Image } from "astro:assets";
+import PublishedBadge from "./PublishedBadge.astro";
+
+interface Props {
+  manga: MangaId[];
+  locale: Locale;
+}
+
+const { manga, locale } = Astro.props;
+---
+
+<table class="table">
+  <tbody>
+    {
+      manga.map((id) => {
+        const m = MANGA[id];
+        const cover = getCover(id, locale);
+        return (
+          <tr class="hover:bg-base-300 relative">
+            <td>
+              <a
+                href={`/${locale}/manga/${id}`}
+                class="absolute inset-0"
+                aria-label={displayWord(m.name, locale)}
+              />
+              {cover && (
+                <Image src={cover} alt="" height={200} class="mx-auto h-20 w-auto max-w-none" />
+              )}
+            </td>
+            <td>
+              <h3 class="font-bold">{displayWord(m.name, locale)}</h3>
+              <div>{displayAlias(m.alias, locale)}</div>
+            </td>
+            <td>
+              <div class="flex justify-center">
+                <PublishedBadge manga={m} className="max-md:text-sm max-lg:h-auto" />
+              </div>
+              <div class="text-center">{displayDate(m.date, locale)}</div>
+            </td>
+          </tr>
+        );
+      })
+    }
+  </tbody>
+</table>

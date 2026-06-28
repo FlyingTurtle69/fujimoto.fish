@@ -3,12 +3,12 @@ import { Markdown } from "astro-remote";
 import Layout from "@/layouts/Layout.astro";
 import { getStaticPaths as getLocalPaths } from "@/pages/[locale]/index.astro";
 import { displayWord } from "@/locale";
-import { MANGA, displayDate, getCover } from "@/content/manga";
-import { displayAlias } from "@/content/aliases";
-import { Image } from "astro:assets";
-import { objectMap } from "@/utils/object";
+import { MANGA, displayDate } from "@/content/manga";
+import { objectKeys, objectMap } from "@/utils/object";
 import PublishedBadge from "@/components/PublishedBadge.astro";
 import ExternalLink from "@/components/ExternalLink.astro";
+import Overview from "@/components/Overview.astro";
+import { COLLECTIONS } from "@/content/collections";
 
 export function getStaticPaths() {
   return getLocalPaths().flatMap(({ params: { locale } }) =>
@@ -17,46 +17,21 @@ export function getStaticPaths() {
 }
 
 const { locale, manga } = Astro.params;
-const { name, alias, summary, summarySource, date, dateProof, jpLink, enLink, note, type } =
-  MANGA[manga];
-const cover = getCover(manga, locale);
+const thisManga = MANGA[manga];
+const { summary, summarySource, date, dateProof, note, type } = thisManga;
+
+const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].manga.includes(manga));
 ---
 
 <Layout>
   <main class="max-w-4xl space-y-4 p-2">
-    <div class="flex gap-4 max-sm:flex-wrap max-sm:justify-center">
-      {cover && <Image src={cover} alt="" class="h-80 w-auto max-w-none sm:h-100" />}
-      <div class="flex w-full flex-col justify-center">
-        <h1 class="text-primary text-2xl font-bold">{displayWord(name, locale)}</h1>
-        <div class="text-secondary mt-1 mb-2 text-lg">{displayAlias(alias, locale)}</div>
-        <div class="flex gap-2">
-          <PublishedBadge manga={MANGA[manga]} />
-          {
-            type && (
-              <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>
-            )
-          }
-        </div>
-        <div class="mt-2">{displayDate(date, locale)}</div>
-
-        <div class="mt-4 flex flex-col space-y-1">
-          {
-            jpLink && (
-              <ExternalLink href={jpLink} small>
-                Read in Japanese
-              </ExternalLink>
-            )
-          }
-          {
-            enLink && (
-              <ExternalLink href={enLink} small>
-                Read in English
-              </ExternalLink>
-            )
-          }
-        </div>
+    <Overview {...thisManga} id={manga} locale={locale}>
+      <div class="flex gap-2">
+        <PublishedBadge manga={thisManga} />
+        {type && <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>}
       </div>
-    </div>
+      <div class="mt-2">{displayDate(date, locale)}</div>
+    </Overview>
 
     {
       summary && (
@@ -71,17 +46,29 @@ const cover = getCover(manga, locale);
       )
     }
 
+    {
+      collectionId && (
+        <div>
+          This manga is apart of
+          <a class="link link-accent link-hover" href={`/${locale}/collection/${collectionId}`}>
+            {displayWord(COLLECTIONS[collectionId].name, locale)}
+          </a>
+          .
+        </div>
+      )
+    }
+
     <div>
       <h2 class="text-lg font-semibold">Proof of Date</h2>
       <Markdown content={displayWord(dateProof, locale)} components={{ a: ExternalLink }} />
     </div>
 
     {
-      MANGA[manga].published === "unpublished" && (
+      thisManga.published === "unpublished" && (
         <div>
           <h2 class="text-lg font-semibold">Proof of Existence</h2>
           <Markdown
-            content={displayWord(MANGA[manga].existenceProof, locale)}
+            content={displayWord(thisManga.existenceProof, locale)}
             components={{ a: ExternalLink }}
           />
         </div>

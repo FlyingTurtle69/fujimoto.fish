@@ -639,19 +639,4 @@ export const MANGA = defineRecord<Manga>()({
   },
 });
 
-type MangaId = keyof typeof MANGA;
-
-const IMAGE_FOLDER = "/src/assets/covers/";
-
-// This has to use a string literal
-const covers = import.meta.glob<{ default?: ImageMetadata }>("/src/assets/covers/*.webp", {
-  eager: true,
-});
-
-export function getCover(manga: MangaId, locale: Locale) {
-  return (
-    covers[`${IMAGE_FOLDER}${manga}.${locale}.webp`]?.default ??
-    covers[`${IMAGE_FOLDER}${manga}.jp.webp`]?.default ??
-    covers[`${IMAGE_FOLDER}${manga}.en.webp`]?.default
-  );
-}
+export type MangaId = keyof typeof MANGA;

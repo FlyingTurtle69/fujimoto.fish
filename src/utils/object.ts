@@ -2,6 +2,10 @@ type Entry<T> = {
   [K in keyof T]: [K, T[K]];
 }[keyof T];
 
+export function objectKeys<T extends object>(object: T): (keyof T)[] {
+  return Object.keys(object) as (keyof T)[];
+}
+
 function objectEntries<T extends object>(object: T): Entry<T>[] {
   return Object.entries(object) as Entry<T>[];
 }

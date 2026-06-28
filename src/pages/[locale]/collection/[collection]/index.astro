@@ -1,0 +1,24 @@
+---
+import MangaList from "@/components/MangaList.astro";
+import Overview from "@/components/Overview.astro";
+import { COLLECTIONS } from "@/content/collections";
+import Layout from "@/layouts/Layout.astro";
+import { getStaticPaths as getLocalPaths } from "@/pages/[locale]/index.astro";
+import { objectMap } from "@/utils/object";
+
+export function getStaticPaths() {
+  return getLocalPaths().flatMap(({ params: { locale } }) =>
+    objectMap(COLLECTIONS, ([collection]) => ({ params: { locale, collection } })),
+  );
+}
+
+const { locale, collection } = Astro.params;
+const col = COLLECTIONS[collection];
+---
+
+<Layout>
+  <main class="max-w-4xl space-y-4 p-2">
+    <Overview {...col} locale={locale} id={collection} />
+    <MangaList manga={col.manga} locale={locale} />
+  </main>
+</Layout>

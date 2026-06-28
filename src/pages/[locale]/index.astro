@@ -1,11 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { displayWord, LOCALES } from "@/locale";
-import { MANGA, displayDate, getCover } from "@/content/manga";
-import { displayAlias } from "@/content/aliases";
-import { Image } from "astro:assets";
-import { objectMap } from "@/utils/object";
-import PublishedBadge from "@/components/PublishedBadge.astro";
+import { LOCALES } from "@/locale";
+import { MANGA } from "@/content/manga";
+import { objectKeys, objectMap } from "@/utils/object";
+import MangaList from "@/components/MangaList.astro";
 
 export function getStaticPaths() {
   return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
@@ -16,38 +14,6 @@ const locale = Astro.params.locale;
 
 <Layout>
   <div>
-    <table class="table">
-      <tbody>
-        {
-          objectMap(MANGA, ([key, value]) => {
-            const cover = getCover(key, locale);
-            return (
-              <tr class="hover:bg-base-300 relative">
-                <td>
-                  <a
-                    href={`/${locale}/manga/${key}`}
-                    class="absolute inset-0"
-                    aria-label={displayWord(value.name, locale)}
-                  />
-                  {cover && (
-                    <Image src={cover} alt="" height={200} class="mx-auto h-20 w-auto max-w-none" />
-                  )}
-                </td>
-                <td>
-                  <h3 class="font-bold">{displayWord(value.name, locale)}</h3>
-                  <div>{displayAlias(value.alias, locale)}</div>
-                </td>
-                <td>
-                  <div class="flex justify-center">
-                    <PublishedBadge manga={value} className="max-md:text-sm max-lg:h-auto" />
-                  </div>
-                  <div class="text-center">{displayDate(value.date, locale)}</div>
-                </td>
-              </tr>
-            );
-          })
-        }
-      </tbody>
-    </table>
+    <MangaList manga={objectKeys(MANGA)} locale={locale} />
   </div>
 </Layout>

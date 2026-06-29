@@ -58,9 +58,9 @@ const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].mang
       )
     }
 
-    <MarkdownSection heading="Proof of Date" text={dateProof} locale={locale} />
+    <MarkdownSection heading="Evidence for Date" text={dateProof} locale={locale} />
     <MarkdownSection
-      heading="Proof of Existence"
+      heading="Evidence for Existence"
       text={thisManga.published === "unpublished" ? thisManga.existenceProof : undefined}
       locale={locale}
     />

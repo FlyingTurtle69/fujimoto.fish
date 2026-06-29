@@ -103,6 +103,7 @@ export const MANGA = defineRecord<Manga>()({
     alias: "nagato",
     date: { year: 2010, certainty: "?" },
     dateProof: {
+      // Archive of the Google search: https://web.archive.org/web/20260629233910/https://www.google.com/search?q=%22%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E7%A7%81%E3%81%AF%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%22&sxsrf=APpeQntRoLJO1Ri7V3DVhSRlOEL6240f_Q%3A1781972411206&sei=HgJDauSNApGrur8P0aW_8A4
       en: "[This](https://www.google.com/search?q=%22%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E7%A7%81%E3%81%AF%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%22&sxsrf=APpeQntRoLJO1Ri7V3DVhSRlOEL6240f_Q%3A1781972411206) Google search has the following snippet from the NeetshaWiki page for NagatoIsMe: 「長門は俺は新都社のヤング作家・少年作家・コニー作家。 作品. ムリゲー(完結) PANTZ(完結) 艦蹴り(完結) それでも私はレビューを始めるのだろう」. This is listing _Impossible Game_, _PANTZ_, _Warship Kick_ and _Even so, I Suppose I'll Start the Review_ as works that NagatoIsMe made. Besides PANTZ, these are all in chronological order. If we assume that PANTZ is also ordered chronologically, then it must have been made in 2010, sometime between February and August.\n\nThis [comment](https://neetsha.jp/inside/comment.php?id=10915&limit=1000#comment_410448) asking why PANTZ was deleted was posted on 26 May 2011, so at the very least we know it must have been older than that.",
     },
     published: "unpublished",

@@ -22,7 +22,9 @@ const locale = Astro.params.locale as Locale;
       <LocaleSelector />
     </header>
     <div class="bg-base-200 flex flex-1 justify-center sm:py-2">
-      <slot />
+      <main class="max-w-4xl space-y-4 p-2">
+        <slot />
+      </main>
     </div>
   </body>
 </html>

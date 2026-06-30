@@ -24,46 +24,44 @@ const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].mang
 ---
 
 <Layout>
-  <main class="max-w-4xl space-y-4 p-2">
-    <Overview {...thisManga} id={manga} locale={locale}>
-      <div class="flex gap-2">
-        <PublishedBadge manga={thisManga} />
-        {type && <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>}
+  <Overview {...thisManga} id={manga} locale={locale}>
+    <div class="flex gap-2">
+      <PublishedBadge manga={thisManga} />
+      {type && <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>}
+    </div>
+    <div class="mt-2">{displayDate(date, locale)}</div>
+  </Overview>
+
+  {
+    summary && (
+      <div>
+        <p>{displayWord(summary, locale)}</p>
+        {summarySource && (
+          <ExternalLink href={displayWord(summarySource, locale)} muted small>
+            Source
+          </ExternalLink>
+        )}
       </div>
-      <div class="mt-2">{displayDate(date, locale)}</div>
-    </Overview>
+    )
+  }
 
-    {
-      summary && (
-        <div>
-          <p>{displayWord(summary, locale)}</p>
-          {summarySource && (
-            <ExternalLink href={displayWord(summarySource, locale)} muted small>
-              Source
-            </ExternalLink>
-          )}
-        </div>
-      )
-    }
+  {
+    collectionId && (
+      <div>
+        This manga is apart of
+        <a class="link link-accent link-hover" href={`/${locale}/collection/${collectionId}`}>
+          {displayWord(COLLECTIONS[collectionId].name, locale)}
+        </a>
+        .
+      </div>
+    )
+  }
 
-    {
-      collectionId && (
-        <div>
-          This manga is apart of
-          <a class="link link-accent link-hover" href={`/${locale}/collection/${collectionId}`}>
-            {displayWord(COLLECTIONS[collectionId].name, locale)}
-          </a>
-          .
-        </div>
-      )
-    }
-
-    <MarkdownSection heading="Evidence for Date" text={dateProof} locale={locale} />
-    <MarkdownSection
-      heading="Evidence for Existence"
-      text={thisManga.published === "unpublished" ? thisManga.existenceProof : undefined}
-      locale={locale}
-    />
-    <MarkdownSection heading="Note" text={note} locale={locale} />
-  </main>
+  <MarkdownSection heading="Evidence for Date" text={dateProof} locale={locale} />
+  <MarkdownSection
+    heading="Evidence for Existence"
+    text={thisManga.published === "unpublished" ? thisManga.existenceProof : undefined}
+    locale={locale}
+  />
+  <MarkdownSection heading="Note" text={note} locale={locale} />
 </Layout>

@@ -4,6 +4,7 @@ import { LOCALES } from "@/locale";
 import { MANGA } from "@/content/manga";
 import { objectKeys, objectMap } from "@/utils/object";
 import MangaList from "@/components/MangaList.astro";
+import { displayAlias } from "@/content/aliases";
 
 export function getStaticPaths() {
   return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
@@ -13,7 +14,14 @@ const locale = Astro.params.locale;
 ---
 
 <Layout>
-  <div>
-    <MangaList manga={objectKeys(MANGA)} locale={locale} />
-  </div>
+  <p>
+    This website aims to document all of Fujimoto's works. Right now it has his known manga,
+    websites and videos. Many of the earlier manga were published under the name {
+      displayAlias("nagato", locale)
+    }. To see why we think this is Fujimoto, go <a
+      href={`/${locale}/alias/nagato`}
+      class="link link-accent link-hover">here</a
+    >.
+  </p>
+  <MangaList manga={objectKeys(MANGA)} locale={locale} />
 </Layout>

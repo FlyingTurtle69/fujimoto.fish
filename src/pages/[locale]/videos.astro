@@ -1,0 +1,29 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getStaticPaths } from "@/pages/[locale]/index.astro";
+
+export { getStaticPaths };
+
+const locale = Astro.params.locale;
+---
+
+<Layout>
+  <div class="card bg-base-100 shadow-sm">
+    <figure>
+      <iframe
+        class="aspect-video"
+        src="https://embed.nicovideo.jp/watch/sm15164148"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">Card Title</h2>
+      <p>
+        A card component has a figure, a body part, and inside body there are title and actions
+        parts
+      </p>
+    </div>
+  </div>
+</Layout>

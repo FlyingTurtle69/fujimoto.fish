@@ -17,8 +17,6 @@ const col = COLLECTIONS[collection];
 ---
 
 <Layout>
-  <main class="max-w-4xl space-y-4 p-2">
-    <Overview {...col} locale={locale} id={collection} />
-    <MangaList manga={col.manga} locale={locale} />
-  </main>
+  <Overview {...col} locale={locale} id={collection} />
+  <MangaList manga={col.manga} locale={locale} />
 </Layout>

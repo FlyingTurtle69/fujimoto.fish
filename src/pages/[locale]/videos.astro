@@ -1,6 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { VIDEOS } from "@/content/videos";
 import { getStaticPaths } from "@/pages/[locale]/index.astro";
+import { displayWord } from "@/locale";
+import { displayDate } from "@/utils/date";
+import JustMarkdown from "@/components/JustMarkdown.astro";
+import { displayAlias } from "@/content/aliases";
+import ExternalLink from "@/components/ExternalLink.astro";
 
 export { getStaticPaths };
 
@@ -8,22 +14,33 @@ const locale = Astro.params.locale;
 ---
 
 <Layout>
-  <div class="card bg-base-100 shadow-sm">
-    <figure>
-      <iframe
-        class="aspect-video"
-        src="https://embed.nicovideo.jp/watch/sm15164148"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">Card Title</h2>
-      <p>
-        A card component has a figure, a body part, and inside body there are title and actions
-        parts
-      </p>
-    </div>
-  </div>
+  <p>
+    These are all videos connected to <a
+      class="link link-hover link-secondary"
+      href={`/${locale}/alias/nagato`}>{displayAlias("nagato", locale)}</a
+    >. The Niconico videos are from a channel of the same name and the YouTube videos are linked to
+    from one of his <ExternalLink href="http://nagatoisme.web.fc2.com/music.html"
+      >websites</ExternalLink
+    >.
+  </p>
+  {
+    VIDEOS.map(({ title, date, embed, caption }) => (
+      <div class="card bg-base-100 shadow-sm">
+        <figure>
+          <iframe
+            class="aspect-video"
+            src={embed}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">{displayWord(title, locale)}</h2>
+          <div class="text-base">{displayDate(date, locale)}</div>
+          <JustMarkdown text={caption} />
+        </div>
+      </div>
+    ))
+  }
 </Layout>

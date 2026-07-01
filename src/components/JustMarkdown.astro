@@ -1,0 +1,14 @@
+---
+import { displayWord, type Locale, type Word } from "@/locale";
+import Markdown from "astro-remote/lib/Markdown.astro";
+import ExternalLink from "./ExternalLink.astro";
+
+interface Props {
+  text: Word | undefined;
+}
+
+const locale = Astro.params.locale as Locale;
+const { text } = Astro.props;
+---
+
+{text && <Markdown content={displayWord(text, locale)} components={{ a: ExternalLink }} />}

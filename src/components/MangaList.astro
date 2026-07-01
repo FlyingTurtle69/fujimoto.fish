@@ -1,10 +1,11 @@
 ---
 import { displayAlias } from "@/content/aliases";
-import { displayDate, MANGA, type MangaId } from "@/content/manga";
+import { MANGA, type MangaId } from "@/content/manga";
 import { displayWord, type Locale } from "@/locale";
 import { getCover } from "@/utils/image";
 import { Image } from "astro:assets";
 import PublishedBadge from "./PublishedBadge.astro";
+import { displayDate } from "@/utils/date";
 
 interface Props {
   manga: MangaId[];

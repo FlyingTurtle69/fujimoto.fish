@@ -2,13 +2,14 @@
 import Layout from "@/layouts/Layout.astro";
 import { getStaticPaths as getLocalPaths } from "@/pages/[locale]/index.astro";
 import { displayWord } from "@/locale";
-import { MANGA, displayDate } from "@/content/manga";
+import { MANGA } from "@/content/manga";
 import { objectKeys, objectMap } from "@/utils/object";
 import PublishedBadge from "@/components/PublishedBadge.astro";
 import ExternalLink from "@/components/ExternalLink.astro";
 import Overview from "@/components/Overview.astro";
 import { COLLECTIONS } from "@/content/collections";
 import MarkdownSection from "@/components/MarkdownSection.astro";
+import { displayDate } from "@/utils/date";
 
 export function getStaticPaths() {
   return getLocalPaths().flatMap(({ params: { locale } }) =>
@@ -57,11 +58,10 @@ const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].mang
     )
   }
 
-  <MarkdownSection heading="Evidence for Date" text={dateProof} locale={locale} />
+  <MarkdownSection heading="Evidence for Date" text={dateProof} />
   <MarkdownSection
     heading="Evidence for Existence"
     text={thisManga.published === "unpublished" ? thisManga.existenceProof : undefined}
-    locale={locale}
   />
-  <MarkdownSection heading="Note" text={note} locale={locale} />
+  <MarkdownSection heading="Note" text={note} />
 </Layout>

@@ -8,7 +8,7 @@ import { MANGA } from "@/content/manga";
 import MangaList from "@/components/MangaList.astro";
 import MarkdownSection from "@/components/MarkdownSection.astro";
 import ExternalLink from "@/components/ExternalLink.astro";
-import Markdown from "astro-remote/lib/Markdown.astro";
+import JustMarkdown from "@/components/JustMarkdown.astro";
 
 export function getStaticPaths() {
   return getLocalPaths().flatMap(({ params: { locale } }) =>
@@ -24,11 +24,7 @@ const manga = objectKeys(MANGA).filter((m) => MANGA[m].alias === alias);
 
 <Layout>
   <h1 class="text-secondary text-center text-3xl font-bold">{displayWord(name, locale)}</h1>
-  {
-    description && (
-      <Markdown content={displayWord(description, locale)} components={{ a: ExternalLink }} />
-    )
-  }
+  <JustMarkdown text={description} />
   {
     links && links.length > 0 && (
       <section>
@@ -54,7 +50,7 @@ const manga = objectKeys(MANGA).filter((m) => MANGA[m].alias === alias);
       </section>
     )
   }
-  <MarkdownSection heading="Evidence for being Fujimoto" text={fujimotoProof} locale={locale} />
+  <MarkdownSection heading="Evidence for being Fujimoto" text={fujimotoProof} />
   <h2 class="mb-0 text-lg font-semibold">Manga</h2>
   <MangaList manga={manga} locale={locale} />
 </Layout>

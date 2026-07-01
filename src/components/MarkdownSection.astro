@@ -1,22 +1,20 @@
 ---
-import { displayWord, type Locale, type Word } from "@/locale";
-import Markdown from "astro-remote/lib/Markdown.astro";
-import ExternalLink from "./ExternalLink.astro";
+import { type Word } from "@/locale";
+import JustMarkdown from "./JustMarkdown.astro";
 
 interface Props {
   heading: string;
   text: Word | undefined;
-  locale: Locale;
 }
 
-const { heading, text, locale } = Astro.props;
+const { heading, text } = Astro.props;
 ---
 
 {
   text && (
     <section class="[&_img]:inline [&_img]:max-w-105 [&_ol]:list-inside [&_ol]:list-decimal">
       <h2 class="text-lg font-semibold">{heading}</h2>
-      <Markdown content={displayWord(text, locale)} components={{ a: ExternalLink }} />
+      <JustMarkdown text={text} />
     </section>
   )
 }

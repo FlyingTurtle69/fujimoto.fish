@@ -5,7 +5,7 @@ import type { Locale } from "@/locale";
 import ExternalLink from "@/components/ExternalLink.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
-const locale = Astro.params.locale as Locale;
+const locale = Astro.params.locale || ("en" as Locale);
 
 const currentPath = Astro.url.pathname;
 

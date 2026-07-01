@@ -38,7 +38,11 @@ const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].mang
       <div>
         <p>{displayWord(summary, locale)}</p>
         {summarySource && (
-          <ExternalLink href={displayWord(summarySource, locale)} muted small>
+          <ExternalLink
+            href={displayWord(summarySource, locale)}
+            colourClass="text-base-content/50"
+            small
+          >
             Source
           </ExternalLink>
         )}

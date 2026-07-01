@@ -2,6 +2,7 @@
 import "@/styles/global.css";
 import LocaleSelector from "@/components/LocaleSelector.astro";
 import type { Locale } from "@/locale";
+import ExternalLink from "@/components/ExternalLink.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const locale = Astro.params.locale as Locale;
@@ -50,5 +51,13 @@ const LINKS = [
         <slot />
       </main>
     </div>
+    <footer class="p-4 text-sm shadow-sm">
+      <div>
+        Contribute on <ExternalLink
+          href="https://github.com/FlyingTurtle69/fujimoto.fish"
+          colourClass="link-secondary">GitHub</ExternalLink
+        >
+      </div>
+    </footer>
   </body>
 </html>

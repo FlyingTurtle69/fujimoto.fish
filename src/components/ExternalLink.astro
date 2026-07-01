@@ -1,13 +1,12 @@
 ---
 interface Props {
   href: string;
-  muted?: boolean;
+  colourClass?: string;
   small?: boolean;
 }
 
-const { href, muted = false, small = false } = Astro.props;
+const { href, colourClass = "text-accent", small = false } = Astro.props;
 
-const colourClass = muted ? "text-base-content/50" : "text-accent";
 const sizeClass = small ? "text-sm" : "";
 ---
 

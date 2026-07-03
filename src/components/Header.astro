@@ -1,0 +1,80 @@
+---
+import LocaleSelector from "@/components/LocaleSelector.astro";
+import { displayWord, type Locale } from "@/locale";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const locale = (Astro.params.locale || "en") as Locale;
+const currentPath = Astro.url.pathname;
+
+const LINKS = [
+  { href: "/", en: "Manga", jp: "漫画" },
+  { href: "/websites", en: "Websites", jp: "ウェブサイト" },
+  { href: "/videos", en: "Videos", jp: "動画" },
+] as const;
+---
+
+<header class="sm:navbar shadow-sm">
+  <input id="navbar-toggle" class="peer hidden" type="checkbox" />
+  <label
+    for="navbar-toggle"
+    aria-label="Close navigation menu"
+    class="fixed inset-0 z-10 hidden max-sm:peer-checked:block"></label>
+
+  <div class="navbar relative z-20 sm:contents">
+    <div class="flex flex-1 items-center sm:items-baseline">
+      <label
+        for="navbar-toggle"
+        aria-label="Open navigation menu"
+        class="btn btn-ghost btn-square mr-1 sm:hidden"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h10M4 18h16"></path>
+        </svg>
+      </label>
+      <a href={getRelativeLocaleUrl(locale)} class="text-xl font-bold">fujimoto.fish</a>
+      <nav class="ml-6 hidden gap-4 sm:flex">
+        {
+          LINKS.map(({ href, en, jp }) => {
+            const link = getRelativeLocaleUrl(locale, href);
+            return (
+              <a
+                class={`link link-hover font-medium ${currentPath === link ? "link-primary" : ""}`}
+                href={link}
+              >
+                {displayWord({ en, jp }, locale)}
+              </a>
+            );
+          })
+        }
+      </nav>
+    </div>
+    <LocaleSelector />
+  </div>
+
+  <nav class="relative z-20 hidden peer-checked:block sm:hidden">
+    <ul class="menu w-full pt-0">
+      {
+        LINKS.map(({ href, en, jp }) => {
+          const link = getRelativeLocaleUrl(locale, href);
+          return (
+            <li>
+              <a class={currentPath === link ? "menu-active" : ""} href={link}>
+                {displayWord({ en, jp }, locale)}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>

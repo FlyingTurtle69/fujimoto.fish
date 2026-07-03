@@ -1,20 +1,8 @@
 ---
 import "@/styles/global.css";
-import LocaleSelector from "@/components/LocaleSelector.astro";
-import { displayWord, type Locale } from "@/locale";
 import ExternalLink from "@/components/ExternalLink.astro";
-import { getRelativeLocaleUrl } from "astro:i18n";
 import Counter from "@/components/Counter.astro";
-
-const locale = (Astro.params.locale || "en") as Locale;
-
-const currentPath = Astro.url.pathname;
-
-const LINKS = [
-  { href: "/", en: "Manga", jp: "漫画" },
-  { href: "/websites", en: "Websites", jp: "ウェブサイト" },
-  { href: "/videos", en: "Videos", jp: "動画" },
-] as const;
+import Header from "@/components/Header.astro";
 ---
 
 <!doctype html>
@@ -27,27 +15,7 @@ const LINKS = [
     <title>fujimoto.fish</title>
   </head>
   <body class="flex h-screen flex-col">
-    <header class="navbar shadow-sm">
-      <div class="flex flex-1 items-baseline">
-        <a href={getRelativeLocaleUrl(locale)} class="text-xl font-bold">fujimoto.fish</a>
-        <nav class="ml-6 flex gap-4">
-          {
-            LINKS.map(({ href, en, jp }) => {
-              const link = getRelativeLocaleUrl(locale, href);
-              return (
-                <a
-                  class={`link link-hover font-medium ${currentPath === link ? "link-primary" : ""}`}
-                  href={link}
-                >
-                  {displayWord({ en, jp }, locale)}
-                </a>
-              );
-            })
-          }
-        </nav>
-      </div>
-      <LocaleSelector />
-    </header>
+    <Header />
     <div class="bg-base-200 flex flex-1 justify-center sm:py-2">
       <main class="my-4 max-w-4xl space-y-4 p-2">
         <slot />

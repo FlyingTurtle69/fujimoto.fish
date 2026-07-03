@@ -1,20 +1,10 @@
-interface Env {
-  ASSETS: {
-    fetch(request: Request): Promise<Response>;
-  };
-}
-
 function preferredLocale(header: string): "en" | "jp" {
   const languages = header
     .split(",")
     .map((entry, index) => {
       const [language, ...parameters] = entry.trim().toLowerCase().split(";");
-      const qualityParameter = parameters.find((value) =>
-        value.trim().startsWith("q="),
-      );
-      const quality = qualityParameter
-        ? Number.parseFloat(qualityParameter.trim().slice(2))
-        : 1;
+      const qualityParameter = parameters.find((value) => value.trim().startsWith("q="));
+      const quality = qualityParameter ? Number.parseFloat(qualityParameter.trim().slice(2)) : 1;
 
       return { language, quality, index };
     })
@@ -40,6 +30,15 @@ export default {
       return Response.redirect(`${url.origin}/${locale}`, 302);
     }
 
+    if (url.pathname === "/api/counter/") {
+      const query =
+        request.method === "POST"
+          ? "UPDATE counter SET value = value + 1 WHERE id = 1 RETURNING value;"
+          : "SELECT value FROM counter WHERE id = 1;";
+      const record = await env.DB.prepare(query).first();
+
+      return Response.json(record);
+    }
     return env.ASSETS.fetch(request);
   },
 };

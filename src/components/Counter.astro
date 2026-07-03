@@ -1,0 +1,20 @@
+<button id="counter-button" class="btn btn-sm">-1</button>
+<script>
+  const button = document.getElementById("counter-button")!;
+  fetch("/api/counter/")
+    .then((res) => res.json())
+    .then((data: any) => {
+      button.innerText = data.value;
+    });
+
+  document.getElementById("counter-button")!.addEventListener("click", () => {
+    fetch("/api/counter/", {
+      method: "POST",
+    })
+      .then((res) => res.json())
+      .then((data: any) => {
+        button.innerText = data.value;
+        button.classList.add("btn-primary");
+      });
+  });
+</script>

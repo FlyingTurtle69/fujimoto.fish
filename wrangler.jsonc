@@ -5,13 +5,20 @@
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/"],
+    "run_worker_first": ["/", "/api/*"],
     "not_found_handling": "404-page"
   },
   "routes": [
     {
       "pattern": "fujimoto.fish",
       "custom_domain": true
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "fujimoto",
+      "database_id": "54a83b8b-7653-4534-874a-0106ac4ce56f"
     }
   ]
 }

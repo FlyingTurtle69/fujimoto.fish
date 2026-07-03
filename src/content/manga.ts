@@ -14,6 +14,7 @@ interface MangaBase {
   summary?: Word;
   summarySource?: Word;
   note?: Word;
+  mokuro?: string; // Don't use this for type: series
 }
 
 interface UnpublishedManga extends MangaBase {
@@ -247,6 +248,7 @@ export const MANGA = defineRecord<Manga>()({
       en: "The image files of the manga, such as [this one](http://nagatoisme.web.fc2.com/de01.jpg), have a modified date of November 3, 2011 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
     },
     jpLink: "http://nagatoisme.web.fc2.com/dezimontop.html",
+    mokuro: "デジモン",
     enLink:
       "https://www.reddit.com/r/Chainsawfolk/comments/1iage3m/english_translation_of_fujimotos_early/",
     summary: {

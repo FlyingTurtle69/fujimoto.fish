@@ -14,9 +14,10 @@ interface Props {
   alias: AliasId;
   jpLink?: string;
   enLink?: string;
+  mokuro?: string;
 }
 
-const { id, locale, name, alias, jpLink, enLink } = Astro.props;
+const { id, locale, name, alias, jpLink, enLink, mokuro } = Astro.props;
 
 const cover = getCover(id, locale);
 ---
@@ -42,6 +43,16 @@ const cover = getCover(id, locale);
         enLink && (
           <ExternalLink href={enLink} small>
             Read in English
+          </ExternalLink>
+        )
+      }
+      {
+        mokuro && (
+          <ExternalLink
+            href={`https://reader.mokuro.app/#/upload?cbz=https://fujimoto.fish/mokuro/${mokuro}.cbz`}
+            small
+          >
+            Mokuro
           </ExternalLink>
         )
       }

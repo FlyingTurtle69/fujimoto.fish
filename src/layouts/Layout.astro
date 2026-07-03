@@ -1,19 +1,19 @@
 ---
 import "@/styles/global.css";
 import LocaleSelector from "@/components/LocaleSelector.astro";
-import type { Locale } from "@/locale";
+import { displayWord, type Locale } from "@/locale";
 import ExternalLink from "@/components/ExternalLink.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Counter from "@/components/Counter.astro";
 
-const locale = Astro.params.locale || ("en" as Locale);
+const locale = (Astro.params.locale || "en") as Locale;
 
 const currentPath = Astro.url.pathname;
 
 const LINKS = [
-  { href: "/", label: "Manga" },
-  { href: "/websites", label: "Websites" },
-  { href: "/videos", label: "Videos" },
+  { href: "/", en: "Manga", jp: "漫画" },
+  { href: "/websites", en: "Websites", jp: "ウェブサイト" },
+  { href: "/videos", en: "Videos", jp: "動画" },
 ] as const;
 ---
 
@@ -32,14 +32,14 @@ const LINKS = [
         <a href={getRelativeLocaleUrl(locale)} class="text-xl font-bold">fujimoto.fish</a>
         <nav class="ml-6 flex gap-4">
           {
-            LINKS.map(({ href, label }) => {
+            LINKS.map(({ href, en, jp }) => {
               const link = getRelativeLocaleUrl(locale, href);
               return (
                 <a
                   class={`link link-hover font-medium ${currentPath === link ? "link-primary" : ""}`}
                   href={link}
                 >
-                  {label}
+                  {displayWord({ en, jp }, locale)}
                 </a>
               );
             })

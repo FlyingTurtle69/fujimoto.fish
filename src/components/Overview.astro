@@ -35,14 +35,14 @@ const cover = getCover(id, locale);
       {
         jpLink && (
           <ExternalLink href={jpLink} small>
-            Read in Japanese
+            {displayWord({ en: "Read in Japanese", jp: "日本語版" }, locale)}
           </ExternalLink>
         )
       }
       {
         enLink && (
           <ExternalLink href={enLink} small>
-            Read in English
+            {displayWord({ en: "Read in English", jp: "英語版" }, locale)}
           </ExternalLink>
         )
       }

@@ -11,9 +11,10 @@ const locale = Astro.params.locale;
 
 <Layout>
   <p>
-    This is a map of {displayAlias("fujimoto", locale)}'s websites he made under the alias {
-      displayAlias("nagato", locale)
-    }. The pages in <span class="text-error">this colour</span> are dead links.
+    This is a map of {displayAlias("fujimoto", locale)}'s websites he made under the alias <a
+      class="link link-hover link-secondary"
+      href={`/${locale}/alias/nagato`}>{displayAlias("nagato", locale)}</a
+    >. The pages in <span class="text-error">this colour</span> are dead links.
   </p>
 
   <section>

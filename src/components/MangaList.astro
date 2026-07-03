@@ -39,9 +39,9 @@ const { manga, locale } = Astro.props;
             </td>
             <td>
               <div class="flex justify-center">
-                <PublishedBadge manga={m} className="max-md:text-sm max-lg:h-auto" />
+                <PublishedBadge manga={m} className="text-nowrap" />
               </div>
-              <div class="text-center">{displayDate(m.date, locale)}</div>
+              <div class="text-center text-nowrap">{displayDate(m.date, locale)}</div>
             </td>
           </tr>
         );

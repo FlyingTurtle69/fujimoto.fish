@@ -22,13 +22,18 @@ const thisManga = MANGA[manga];
 const { summary, summarySource, date, dateProof, note, type } = thisManga;
 
 const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].manga.includes(manga));
+
+const TYPE = {
+  "one-shot": { en: "One-Shot", jp: "読み切り" },
+  series: { en: "Series", jp: "連載" },
+} as const;
 ---
 
 <Layout>
   <Overview {...thisManga} id={manga} locale={locale}>
     <div class="flex gap-2">
       <PublishedBadge manga={thisManga} />
-      {type && <div class="badge badge-dash">{type === "one-shot" ? "One-Shot" : "Series"}</div>}
+      {type && <div class="badge badge-dash">{displayWord(TYPE[type], locale)}</div>}
     </div>
     <div class="mt-2">{displayDate(date, locale)}</div>
   </Overview>
@@ -62,10 +67,10 @@ const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].mang
     )
   }
 
-  <MarkdownSection heading="Evidence for Date" text={dateProof} />
+  <MarkdownSection heading={{ en: "Evidence for Date", jp: "日付の証拠" }} text={dateProof} />
   <MarkdownSection
-    heading="Evidence for Existence"
+    heading={{ en: "Evidence for Existence", jp: "存在の証拠" }}
     text={thisManga.published === "unpublished" ? thisManga.existenceProof : undefined}
   />
-  <MarkdownSection heading="Note" text={note} />
+  <MarkdownSection heading={{ en: "Note" }} text={note} />
 </Layout>

@@ -1,19 +1,20 @@
 ---
-import { type Word } from "@/locale";
+import { displayWord, type Locale, type Word } from "@/locale";
 import JustMarkdown from "./JustMarkdown.astro";
 
 interface Props {
-  heading: string;
+  heading: Word;
   text: Word | undefined;
 }
 
+const locale = Astro.params.locale as Locale;
 const { heading, text } = Astro.props;
 ---
 
 {
   text && (
     <section class="[&_img]:inline [&_img]:max-w-[min(100%,26.25rem)] [&_ol]:list-inside [&_ol]:list-decimal">
-      <h2 class="text-lg font-semibold">{heading}</h2>
+      <h2 class="text-lg font-semibold">{displayWord(heading, locale)}</h2>
       <JustMarkdown text={text} />
     </section>
   )

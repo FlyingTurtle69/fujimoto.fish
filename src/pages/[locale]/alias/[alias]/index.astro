@@ -50,7 +50,7 @@ const manga = objectKeys(MANGA).filter((m) => MANGA[m].alias === alias);
       </section>
     )
   }
-  <MarkdownSection heading="Evidence for being Fujimoto" text={fujimotoProof} />
+  <MarkdownSection heading={{ en: "Evidence for being Fujimoto" }} text={fujimotoProof} />
   <h2 class="mb-0 text-lg font-semibold">Manga</h2>
   <MangaList manga={manga} locale={locale} />
 </Layout>

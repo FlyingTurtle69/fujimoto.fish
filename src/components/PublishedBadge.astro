@@ -1,18 +1,20 @@
 ---
 import type { Manga } from "@/content/manga";
+import { displayWord, type Locale } from "@/locale";
 
 interface Props {
   manga: Manga;
   className?: string;
 }
 
+const locale = Astro.params.locale as Locale;
 const { manga, className = "" } = Astro.props;
 const { published } = manga;
 
 const TEXT = {
-  published: "Published",
-  "self-published": "Self-Published",
-  unpublished: "Not Published",
+  published: { en: "Published", jp: "公開済み" },
+  "self-published": { en: "Self-Published", jp: "自主制作" },
+  unpublished: { en: "Not Published", jp: "未公開" },
 } as const;
 
 const CLASS = {
@@ -22,4 +24,4 @@ const CLASS = {
 } as const;
 ---
 
-<div class={`badge ${CLASS[published]} ${className}`}>{TEXT[published]}</div>
+<div class={`badge ${CLASS[published]} ${className}`}>{displayWord(TEXT[published], locale)}</div>

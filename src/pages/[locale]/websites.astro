@@ -1,0 +1,140 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ExternalLink from "@/components/ExternalLink.astro";
+import { getStaticPaths } from "@/pages/[locale]/index.astro";
+import { displayAlias } from "@/content/aliases";
+
+export { getStaticPaths };
+
+const locale = Astro.params.locale;
+---
+
+<Layout>
+  <p>
+    This is a map of {displayAlias("fujimoto", locale)}'s websites he made under the alias {
+      displayAlias("nagato", locale)
+    }. The pages in <span class="text-error">this colour</span> are dead links.
+  </p>
+
+  <section>
+    <h2 class="text-lg font-semibold">nagatoisme.web.fc2.com</h2>
+    <pre><ExternalLink href="http://nagatoisme.web.fc2.com/index.html">index.html</ExternalLink>
+├─ <ExternalLink href="http://nagatoisme.web.fc2.com/about.html">about.html</ExternalLink>
+├─ <ExternalLink href="http://nagatoisme.web.fc2.com/comic.html">comic.html</ExternalLink>
+│  ├─ <ExternalLink href="http://nagatoisme.web.fc2.com/tetteretop.html">tetteretop.html</ExternalLink>
+│  │  ├─ <ExternalLink href="http://nagatoisme.web.fc2.com/tettere1.html">tettere1.html</ExternalLink>
+│  │  ├─ <ExternalLink href="http://nagatoisme.web.fc2.com/tettere2.html">tettere2.html</ExternalLink>
+│  │  ├─ <ExternalLink href="http://nagatoisme.web.fc2.com/tettere3.html">tettere3.html</ExternalLink>
+│  │  ├─ <ExternalLink href="http://nagatoisme.web.fc2.com/tettere4.html">tettere4.html</ExternalLink>
+│  │  ├─ <ExternalLink href="http://nagatoisme.web.fc2.com/tettere5.html">tettere5.html</ExternalLink>
+│  │  └─ <ExternalLink href="http://nagatoisme.web.fc2.com/tetterefa.html">tetterefa.html</ExternalLink>
+│  ├─ <ExternalLink href="http://nagatoisme.web.fc2.com/dezimontop.html">dezimontop.html</ExternalLink>
+│  │  └─ <ExternalLink href="http://nagatoisme.web.fc2.com/dezimon1.html">dezimon1.html</ExternalLink>
+│  └─ <ExternalLink href="http://nagatoisme.web.fc2.com/sonota.html">sonota.html</ExternalLink>
+│     └─ <ExternalLink href="http://nagatoisme.web.fc2.com/mahoutop.html">mahoutop.html</ExternalLink>
+│        └─ <ExternalLink href="http://nagatoisme.web.fc2.com/mahou1.html">mahou1.html</ExternalLink>
+├─ <ExternalLink href="http://nagatoisme.web.fc2.com/music.html">music.html</ExternalLink>
+└─ <ExternalLink href="http://nagatoisme.web.fc2.com/link.html">link.html</ExternalLink></pre>
+  </section>
+
+  <section>
+    <h2 class="text-lg font-semibold">namakuriimu.web.fc2.com</h2>
+    <pre><ExternalLink href="http://namakuriimu.web.fc2.com/index.html">index.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/1.html">1.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/2.html">2.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/3.html">3.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/4.html">4.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/5.html">5.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/6.html">6.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/7.html">7.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/8.html">8.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/9.html">9.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/10.html">10.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/11.html">11.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/12.html">12.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/13.html">13.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/14.html">14.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/15.html">15.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/16.html">16.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/17.html">17.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/18.html">18.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/19.html">19.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/20.html">20.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/21.html">21.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/22.html">22.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/23.html">23.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/24.html">24.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/25.html">25.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/26.html">26.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/27.html">27.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/28.html">28.html</ExternalLink>
+│  └─ <ExternalLink href="http://namakuriimu.web.fc2.com/index2.html">index2.html</ExternalLink>
+│     └─ <ExternalLink href="http://namakuriimu.web.fc2.com/29.html">29.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/fa.html">fa.html</ExternalLink>
+└─ <ExternalLink href="http://namakuriimu.web.fc2.com/0000index.html">0000index.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/000x.html">000x.html</ExternalLink>
+   │  ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0000.html">0000.html</ExternalLink>
+   │  ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0001.html">0001.html</ExternalLink>
+   │  ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0002.html">0002.html</ExternalLink>
+   │  ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0003.html">0003.html</ExternalLink>
+   │  ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0004.html">0004.html</ExternalLink>
+   │  ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0005.html">0005.html</ExternalLink>
+   │  ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0006.html">0006.html</ExternalLink>
+   │  └─ <ExternalLink href="http://namakuriimu.web.fc2.com/0007.html">0007.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/001.html">001.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/002.html">002.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/003.html">003.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/004.html">004.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/005.html">005.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/006.html">006.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/007.html">007.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/008.html">008.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/009.html">009.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/010.html">010.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/011.html">011.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/012.html">012.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/013.html">013.html</ExternalLink>
+   │  └─ <ExternalLink href="http://namakuriimu.web.fc2.com/014.html">014.html</ExternalLink> (same as <ExternalLink href="http://namakuriimu.web.fc2.com/0014.html">0014.html</ExternalLink>)
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0014.html">0014.html</ExternalLink>
+   │  └─ <span class="text-error">015.html</span>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0015.html">0015.html</ExternalLink>
+   │  └─ <span class="text-error">016.html</span>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0016.html">0016.html</ExternalLink>
+   │  └─ <span class="text-error">017.html</span>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0017.html">0017.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0018.html">0018.html</ExternalLink>
+   │  └─ <span class="text-error">019.html</span>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0019.html">0019.html</ExternalLink>
+   ├─ <ExternalLink href="http://namakuriimu.web.fc2.com/0020.html">0020.html</ExternalLink>
+   └─ <ExternalLink href="http://namakuriimu.web.fc2.com/1111.html">1111.html</ExternalLink>
+<ExternalLink href="http://namakuriimu.web.fc2.com/tindex.html">tindex.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/koi1.html">koi1.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/t1.html">t1.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/t2.html">t2.html</ExternalLink>
+└─ <span class="text-error">t3.html</span>
+<ExternalLink href="http://namakuriimu.web.fc2.com/reindex.html">reindex.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/re1.html">re1.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/re2.html">re2.html</ExternalLink>
+├─ <ExternalLink href="http://namakuriimu.web.fc2.com/re3.html">re3.html</ExternalLink>
+│  └─ <span class="text-error">re4.html</span>
+└─ <ExternalLink href="http://namakuriimu.web.fc2.com/rexxxx.html">rexxxx.html</ExternalLink></pre>
+  </section>
+
+  <section>
+    <h2 class="text-lg font-semibold">nagatohaore.web.fc2.com</h2>
+    <p class="mb-1">
+      This seems to be some kind of group project by a few different artists. The work by {
+        displayAlias("fujimoto", locale)
+      } is <ExternalLink href="http://nagatohaore.web.fc2.com/01.htm">01.htm</ExternalLink>.
+    </p>
+    <pre><ExternalLink href="http://nagatohaore.web.fc2.com/index.html">index.html</ExternalLink>
+├─ <span class="text-error">sutekiyan.html</span>
+├─ <ExternalLink href="http://nagatohaore.web.fc2.com/01.htm">01.htm</ExternalLink>
+│  └─ <ExternalLink href="http://nagatohaore.web.fc2.com/index.htm">index.htm</ExternalLink> (same as <ExternalLink href="http://nagatohaore.web.fc2.com/index.html">index.html</ExternalLink>)
+├─ <ExternalLink href="http://nagatohaore.web.fc2.com/002.htm">002.htm</ExternalLink>
+├─ <ExternalLink href="http://nagatohaore.web.fc2.com/0003.htm">0003.htm</ExternalLink>
+├─ <ExternalLink href="http://nagatohaore.web.fc2.com/00004.htm">00004.htm</ExternalLink> (NSFW)
+├─ <span class="text-error">06.html</span>
+└─ <span class="text-error">07.html</span></pre>
+  </section>
+</Layout>

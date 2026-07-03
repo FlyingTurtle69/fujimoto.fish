@@ -8,6 +8,8 @@ interface Props {
 const { href, colourClass = "text-accent", small = false } = Astro.props;
 
 const sizeClass = small ? "text-sm" : "";
+
+// Note the weird formatting is necessary for websites.astro to render the <pre> tag correctly.
 ---
 
 <a
@@ -15,9 +17,7 @@ const sizeClass = small ? "text-sm" : "";
   href={href}
   target="_blank"
   rel="noopener noreferrer"
->
-  <slot />
-  <svg
+  ><slot /><svg
     aria-hidden="true"
     class="mb-0.5 ml-0.5 inline-block size-3"
     viewBox="0 0 24 24"
@@ -28,5 +28,5 @@ const sizeClass = small ? "text-sm" : "";
     <path d="M15 3h6v6"></path>
     <path d="M10 14 21 3"></path>
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-  </svg>
-</a>
+  </svg></a
+>

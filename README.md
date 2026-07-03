@@ -1,6 +1,6 @@
 # fujimoto.fish
 
-This website aims to document all of Fujimoto's works.
+This website aims to document all of Tatsuki Fujimoto's works.
 
 ## Contributing
 

@@ -1,0 +1,156 @@
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@plugin "daisyui" {
+  root: ".tailwind-header";
+  themes: sunset --default;
+}
+
+@layer base {
+  .tailwind-header {
+    background: var(--color-base-100);
+    color: var(--color-base-content);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  .tailwind-header,
+  .tailwind-header *,
+  .tailwind-header::before,
+  .tailwind-header::after,
+  .tailwind-header *::before,
+  .tailwind-header *::after {
+    box-sizing: border-box;
+    border: 0 solid;
+  }
+
+  .tailwind-header * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tailwind-header a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .tailwind-header menu,
+  .tailwind-header ol,
+  .tailwind-header ul {
+    list-style: none;
+  }
+
+  .tailwind-header button,
+  .tailwind-header input,
+  .tailwind-header optgroup,
+  .tailwind-header select,
+  .tailwind-header textarea {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  .tailwind-header button,
+  .tailwind-header input:where([type="button"], [type="reset"], [type="submit"]) {
+    appearance: button;
+  }
+
+  .tailwind-header svg {
+    display: block;
+    vertical-align: middle;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+.namakuriimu-page {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.namakuriimu-page h1 {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  padding: 3px;
+  border-top: 2px solid #22395e;
+  border-bottom: 2px solid #22395e;
+}
+
+.namakuriimu-page a {
+  color: #000000;
+}
+
+.namakuriimu-page a:visited {
+  color: #595e3c;
+}
+
+.namakuriimu-page a:hover {
+  color: #404040;
+}
+
+.namakuriimu-page a:active {
+  color: #ff0000;
+}
+
+.namakuriimu-page #main {
+  background-color: #eee;
+  text-align: left;
+  border: 2px solid #22395e;
+  width: 644px;
+  line-height: 120%;
+  margin: 0 auto 0 auto;
+  padding: 4px;
+}
+
+.namakuriimu-page #comment {
+  background-color: #eee;
+  text-align: left;
+  border: 2px solid #22395e;
+  width: 644px;
+  margin: 20px auto 0 auto;
+  padding: 4px;
+}
+
+.namakuriimu-page .center {
+  text-align: center;
+}
+
+.namakuriimu-page td {
+  margin: 0;
+}
+
+.namakuriimu-page .post {
+  color: #f00;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.namakuriimu-page #bgi {
+  margin: 0;
+  padding: 0;
+  width: 640px;
+  text-align: center;
+  border-bottom: 2px solid #22395e;
+  overflow: hidden;
+}
+
+.namakuriimu-page .cover {
+  max-width: 640px;
+  max-height: 800px;
+}
+
+.namakuriimu-page form {
+  margin-block-end: 1em;
+}
+
+.namakuriimu-page img {
+  vertical-align: bottom;
+}

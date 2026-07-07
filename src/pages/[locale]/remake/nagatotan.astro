@@ -1,0 +1,123 @@
+---
+import "@/styles/namakuriimu.css";
+import Header from "@/components/Header.astro";
+import { displayWord, LOCALES } from "@/locale";
+import { objectMap } from "@/utils/object";
+import { COLLECTIONS } from "@/content/collections";
+import { MANGA } from "@/content/manga";
+
+export function getStaticPaths() {
+  return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale;
+
+const title = displayWord(COLLECTIONS.nagatotan.name, locale);
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="tailwind-header">
+      <Header />
+    </div>
+
+    <div class="namakuriimu-page">
+      <div id="main">
+        <table>
+          <tbody>
+            <tr>
+              <td rowspan="2">
+                <a href="http://neetsha.com/inside//main.php?magazine=2" target="_self">
+                  <img src="/images/remake/neetel_inside.webp" />
+                </a>
+              </td>
+              <td>
+                <a href="http://neetsha.com/inside/main.php?magazine=1" target="_self"
+                  >週刊少年VIP</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h1>{title}</h1>
+        <div id="bgi">
+          <img src="/images/remake/nagatotan.jp.webp" />
+        </div>
+        <br />
+        &nbsp;<a href="http://namakuriimu.web.fc2.com/koi1.html"
+          >{displayWord(MANGA.sayonaraheaven.name, locale)}(NEW)</a
+        >
+        <br />
+        &nbsp;<a href="http://namakuriimu.web.fc2.com/t1.html"
+          >{displayWord(MANGA.pasokon.chapters![0].name, locale)}</a
+        >
+        <br />
+        &nbsp;<a href="http://namakuriimu.web.fc2.com/t2.html"
+          >{displayWord(MANGA.pasokon.chapters![1].name, locale)}</a
+        >
+        <br />
+        &nbsp;<a href="http://namakuriimu.web.fc2.com/t3.html"
+          >{
+            displayWord(
+              {
+                jp: "パソコンと彼女３（描いてる途中）",
+                en: "Computer and Her 3 (in the middle of writing)",
+              },
+              locale,
+            )
+          }</a
+        >
+        <br />
+        <br />
+      </div>
+
+      <div id="comment">
+        <table>
+          <tbody>
+            <tr>
+              <td rowspan="2">
+                <a href="http://neetsha.com/" target="_top">
+                  <img src="/images/remake/logo.gif" alt="Neetsha" />
+                </a>
+              </td>
+              <td style="vertical-align:top;">
+                作者コメント:ついカっとなって。<br />
+                <form
+                  action="http://neetsha.com/inside/comment.php"
+                  method="post"
+                  accept-charset="euc-jp,us-ascii"
+                >
+                  <a href="http://neetsha.com/inside/comment.php?id=9080">〒</a>
+                  <input type="hidden" name="methodid" value="1" />
+                  <input type="hidden" name="id" value="9080" />
+                  <input type="hidden" name="enc" value="0" />
+                  <input type="text" size="50" maxlength="256" name="comment" />
+                  <input type="submit" name="submit" value="コメント送信" />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align:bottom;">
+                長門は俺先生に励ましのお便りを送ろう！！ そしてＦＡをたくさんおくろう！！！！
+                <table>
+                  <tbody>
+                    <tr>
+                      <td> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

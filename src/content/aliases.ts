@@ -5,7 +5,6 @@ interface Link {
   name: string;
   link?: string;
   explanation?: string;
-  explanationLink?: string;
 }
 
 interface Alias {
@@ -59,7 +58,6 @@ export const ALIASES = defineRecord<Alias>()({
         name: "@NagatoIsMe on Twitter",
         explanation:
           "The current owner of the username is a different account. Fujimoto's account was deleted.",
-        explanationLink: "https://youtu.be/mm09js87DpI?t=437",
       },
       {
         name: "nagatoisme.web.fc2.com",

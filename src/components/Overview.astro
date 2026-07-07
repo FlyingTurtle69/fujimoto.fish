@@ -6,6 +6,7 @@ import { displayWord, type Locale, type Word } from "@/locale";
 import { getCover } from "@/utils/image";
 import { Image } from "astro:assets";
 import ExternalLink from "./ExternalLink.astro";
+import MokuroLink from "./MokuroLink.astro";
 
 interface Props {
   id: MangaId | CollectionId;
@@ -46,16 +47,7 @@ const cover = getCover(id, locale);
           </ExternalLink>
         )
       }
-      {
-        mokuro && (
-          <ExternalLink
-            href={`https://reader.mokuro.app/#/upload?cbz=https://fujimoto.fish/mokuro/${mokuro}.cbz`}
-            small
-          >
-            Mokuro
-          </ExternalLink>
-        )
-      }
+      {mokuro && <MokuroLink mokuro={mokuro} />}
     </div>
   </div>
 </div>

@@ -10,6 +10,7 @@ import Overview from "@/components/Overview.astro";
 import { COLLECTIONS } from "@/content/collections";
 import MarkdownSection from "@/components/MarkdownSection.astro";
 import { displayDate } from "@/utils/date";
+import MokuroLink from "@/components/MokuroLink.astro";
 
 export function getStaticPaths() {
   return getLocalPaths().flatMap(({ params: { locale } }) =>
@@ -19,7 +20,7 @@ export function getStaticPaths() {
 
 const { locale, manga } = Astro.params;
 const thisManga = MANGA[manga];
-const { summary, summarySource, date, dateProof, note, type } = thisManga;
+const { summary, summarySource, date, dateProof, note, type, chapters } = thisManga;
 
 const collectionId = objectKeys(COLLECTIONS).find((col) => COLLECTIONS[col].manga.includes(manga));
 
@@ -40,7 +41,7 @@ const TYPE = {
 
   {
     summary && (
-      <div>
+      <section>
         <p>{displayWord(summary, locale)}</p>
         {summarySource && (
           <ExternalLink
@@ -51,19 +52,40 @@ const TYPE = {
             Source
           </ExternalLink>
         )}
-      </div>
+      </section>
     )
   }
 
   {
     collectionId && (
-      <div>
+      <section>
         This manga is apart of
         <a class="link link-accent link-hover" href={`/${locale}/collection/${collectionId}`}>
           {displayWord(COLLECTIONS[collectionId].name, locale)}
         </a>
         .
-      </div>
+      </section>
+    )
+  }
+
+  {
+    chapters && (
+      <section>
+        <h2 class="text-lg font-semibold">Chapters</h2>
+        <ol class="list-inside list-decimal">
+          {chapters.map((c) => (
+            <li>
+              {displayWord(c.name, locale)}
+              {c.mokuro && (
+                <>
+                  {" - "}
+                  <MokuroLink mokuro={c.mokuro} />
+                </>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
     )
   }
 

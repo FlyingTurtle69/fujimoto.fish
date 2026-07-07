@@ -3,6 +3,10 @@ import type { AliasId } from "./aliases";
 import { defineRecord } from "@/utils/object";
 import type { ReleaseDate } from "@/utils/date";
 
+interface Chapter {
+  name: Word;
+  mokuro?: string;
+}
 interface MangaBase {
   name: Word;
   alias: AliasId;
@@ -15,6 +19,7 @@ interface MangaBase {
   summarySource?: Word;
   note?: Word;
   mokuro?: string; // Don't use this for type: series
+  chapters?: Chapter[]; // Only use this for type: series
 }
 
 interface UnpublishedManga extends MangaBase {
@@ -83,7 +88,7 @@ export const MANGA = defineRecord<Manga>()({
   },
   pasokon: {
     name: {
-      en: "PC and Her",
+      en: "Computer and Her",
       jp: "パソコンと彼女",
       "en-romaji": "Pasokon to Kanojo",
     },
@@ -95,6 +100,24 @@ export const MANGA = defineRecord<Manga>()({
     },
     jpLink: "http://namakuriimu.web.fc2.com/t1.html",
     published: "self-published",
+    chapters: [
+      {
+        name: {
+          en: "Computer and Her 1",
+          jp: "パソコンと彼女１",
+          "en-romaji": "Pasokon to Kanojo 1",
+        },
+        mokuro: "パソコンと彼女１",
+      },
+      {
+        name: {
+          en: "Computer and Her 2",
+          jp: "パソコンと彼女２",
+          "en-romaji": "Pasokon to Kanojo 2",
+        },
+        mokuro: "パソコンと彼女２",
+      },
+    ],
   },
   review: {
     name: {
@@ -124,6 +147,7 @@ export const MANGA = defineRecord<Manga>()({
       en: "The image files of the manga, such as [this one](http://namakuriimu.web.fc2.com/koi1.jpg), have a modified date of November 7, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`).",
     },
     jpLink: "http://namakuriimu.web.fc2.com/koi1.html",
+    mokuro: "サヨナラヘヴン",
     published: "self-published",
   },
   ashitasen: {

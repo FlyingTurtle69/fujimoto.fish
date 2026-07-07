@@ -1,0 +1,16 @@
+---
+import ExternalLink from "./ExternalLink.astro";
+
+interface Props {
+  mokuro: string;
+}
+
+const { mokuro } = Astro.props;
+---
+
+<ExternalLink
+  href={`https://reader.mokuro.app/#/upload?cbz=https://fujimoto.fish/mokuro/${mokuro}.cbz`}
+  small
+>
+  Mokuro
+</ExternalLink>

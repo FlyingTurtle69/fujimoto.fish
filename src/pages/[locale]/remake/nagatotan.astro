@@ -5,6 +5,8 @@ import { displayWord, LOCALES } from "@/locale";
 import { objectMap } from "@/utils/object";
 import { COLLECTIONS } from "@/content/collections";
 import { MANGA } from "@/content/manga";
+import { getCover } from "@/utils/image";
+import { Image } from "astro:assets";
 
 export function getStaticPaths() {
   return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
@@ -13,6 +15,8 @@ export function getStaticPaths() {
 const locale = Astro.params.locale;
 
 const title = displayWord(COLLECTIONS.nagatotan.name, locale);
+const shukanShonen = displayWord({ jp: "週刊少年VIP", en: "Weekly Shonen VIP" }, locale);
+const cover = getCover("nagatotan", locale);
 ---
 
 <html>
@@ -39,16 +43,15 @@ const title = displayWord(COLLECTIONS.nagatotan.name, locale);
                 </a>
               </td>
               <td>
-                <a href="http://neetsha.com/inside/main.php?magazine=1" target="_self"
-                  >週刊少年VIP</a
-                >
+                {/* not using set:html breaks markup for some reason */}
+                <a href="http://neetsha.com/inside/main.php?magazine=1" set:html={shukanShonen} />
               </td>
             </tr>
           </tbody>
         </table>
         <h1>{title}</h1>
         <div id="bgi">
-          <img src="/images/remake/nagatotan.jp.webp" />
+          <Image src={cover!} alt="" />
         </div>
         <br />
         &nbsp;<a href="http://namakuriimu.web.fc2.com/koi1.html"

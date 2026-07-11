@@ -2,17 +2,22 @@ import type { CollectionId } from "@/content/collections";
 import type { MangaId } from "@/content/manga";
 import type { Locale } from "@/locale";
 
-const IMAGE_FOLDER = "/src/assets/covers/";
+const IMAGE_FOLDER = "/src/assets/";
 
 // This has to use a string literal
-const covers = import.meta.glob<{ default?: ImageMetadata }>("/src/assets/covers/*.webp", {
+const covers = import.meta.glob<{ default?: ImageMetadata }>("/src/assets/**/*.webp", {
   eager: true,
 });
 
-export function getCover(manga: MangaId | CollectionId, locale: Locale) {
+function getImage(folder: string, name: string, locale: Locale) {
+  const withoutLocale = `${IMAGE_FOLDER}${folder}/${name}`;
   return (
-    covers[`${IMAGE_FOLDER}${manga}.${locale}.webp`]?.default ??
-    covers[`${IMAGE_FOLDER}${manga}.jp.webp`]?.default ??
-    covers[`${IMAGE_FOLDER}${manga}.en.webp`]?.default
+    covers[`${withoutLocale}.${locale}.webp`]?.default ??
+    covers[`${withoutLocale}.jp.webp`]?.default ??
+    covers[`${withoutLocale}.en.webp`]?.default
   );
+}
+
+export function getCover(manga: MangaId | CollectionId, locale: Locale) {
+  return getImage("covers", manga, locale);
 }

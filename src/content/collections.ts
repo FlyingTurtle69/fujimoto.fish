@@ -36,10 +36,11 @@ export const COLLECTIONS = defineRecord<Collection>()({
     name: {
       en: "NagatoIsMe Short Story Collection",
       jp: "長門は俺短編集",
-      "en-romaji": "NagatoWaOre Tanhenshū",
+      "en-romaji": "NagatoWaOre Tampenshū",
     },
     alias: "nagato",
     jpLink: "http://namakuriimu.web.fc2.com/tindex.html",
+    enLink: "/en/remake/nagatotan",
     manga: ["sayonaraheaven", "pasokon"],
   },
 });

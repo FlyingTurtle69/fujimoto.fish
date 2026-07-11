@@ -75,7 +75,7 @@ body {
   text-align: center;
 }
 
-.namakuriimu-page h1 {
+.namakuriimu-page #main h1 {
   font-size: 24px;
   line-height: 30px;
   margin: 0;
@@ -84,7 +84,8 @@ body {
   border-bottom: 2px solid #22395e;
 }
 
-.namakuriimu-page a {
+.namakuriimu-page a,
+.namakuriimu-page a.black:visited {
   color: #000000;
 }
 
@@ -152,6 +153,8 @@ body {
 }
 
 .namakuriimu-page img {
+  max-width: 100%;
+  height: auto;
   vertical-align: bottom;
 }
 
@@ -161,4 +164,26 @@ body {
     width: min(50ch, max(8rem, calc(100vw - 180px)));
     max-width: 100%;
   }
+}
+
+.namakuriimu-page #manga {
+  background-color: #eee;
+  padding: 5px 24px 5px 24px;
+  text-align: left;
+  font-size: 88%;
+  border: 2px solid;
+  line-height: 150%;
+  max-width: 644px;
+  font-family: "ＭＳ ゴシック", "Osaka-等幅", monospace;
+}
+.namakuriimu-page #manga h1 {
+  text-align: center;
+  color: #888;
+  font-size: 180%;
+  line-height: 150%;
+  font-weight: bold;
+  border-width: 2px 0 2px 0;
+  border-style: solid;
+  border-color: #888;
+  background-color: #fff;
 }

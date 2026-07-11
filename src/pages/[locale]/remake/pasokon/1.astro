@@ -1,0 +1,69 @@
+---
+import { MANGA } from "@/content/manga";
+import NamakuriimuLayout from "@/layouts/NamakuriimuLayout.astro";
+import { displayWord, LOCALES } from "@/locale";
+import { objectMap } from "@/utils/object";
+import { Image } from "astro:assets";
+import { getPage } from "@/utils/image";
+
+export function getStaticPaths() {
+  return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale;
+
+const title = displayWord(MANGA.pasokon.name, locale);
+---
+
+<NamakuriimuLayout title={title}>
+  <div class="center">
+    <a class="black" href={`/${locale}/remake/nagatotan`}>TOP</a>
+    <br />
+  </div>
+  <center>
+    <div id="manga">
+      <h1>{title}</h1>
+      {
+        [...Array(11).keys()].map((i) => (
+          <>
+            <>
+              <br />
+              <div class="center">
+                <Image src={getPage("pasokon", 1, i + 1, locale)!} alt={`Page ${i + 1}`} />
+              </div>
+              <br />
+            </>
+          </>
+        ))
+      }
+      {
+        displayWord(
+          {
+            jp: "コメント、ＦＡくれるとモチベーションあがります。",
+            en: "If you comment or make fanart, I'll be more motivated.",
+          },
+          locale,
+        )
+      }
+      <!-- Neetel_Inside_Comment -->
+      <form
+        action="http://neetsha.com/inside/comment.php"
+        method="post"
+        accept-charset="euc-jp,us-ascii"
+      >
+        <a href="http://neetsha.com/inside/comment.php?id=9080">〒</a>
+        <input type="hidden" name="methodid" value="1" />
+        <input type="hidden" name="id" value="9080" />
+        <input type="hidden" name="enc" value="0" />
+        <input type="text" size="50" maxlength="256" name="comment" />
+        <input type="submit" name="submit" value="コメント送信" />
+      </form>
+      <!-- Neetel_Inside_Comment -->
+      <td> </td>
+    </div>
+    <div class="center">
+      <a class="black" href={`/${locale}/remake/nagatotan`}>TOP</a>
+      <br />
+    </div>
+  </center>
+</NamakuriimuLayout>

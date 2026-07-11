@@ -1,0 +1,28 @@
+---
+import "@/styles/namakuriimu.css";
+import Header from "@/components/Header.astro";
+
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="tailwind-header">
+      <Header />
+    </div>
+
+    <div class="namakuriimu-page">
+      <slot />
+    </div>
+  </body>
+</html>

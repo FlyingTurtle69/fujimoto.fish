@@ -99,6 +99,7 @@ export const MANGA = defineRecord<Manga>()({
       en: "The image files of pages 1 to 6 of the first chapter have a modified date of 13 August 2010, whereas pages 7 to [11](http://namakuriimu.web.fc2.com/t011.jpg) have a modified date of 14 September. I decided to use the latter date because I thought that maybe Fujimoto didn't release the first chapter until all the pages were complete.",
     },
     jpLink: "http://namakuriimu.web.fc2.com/t1.html",
+    enLink: "/en/remake/pasokon/1",
     published: "self-published",
     chapters: [
       {

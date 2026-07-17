@@ -36,7 +36,7 @@ export type Manga = UnpublishedManga | PublishedManga;
 export const MANGA = defineRecord<Manga>()({
   murige: {
     name: {
-      en: "Impossible Game",
+      en: "A Forced Game",
       jp: "ムリゲー",
       "en-romaji": "Murigē",
     },

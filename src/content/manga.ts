@@ -36,7 +36,7 @@ export type Manga = UnpublishedManga | PublishedManga;
 export const MANGA = defineRecord<Manga>()({
   murige: {
     name: {
-      en: "Impossible Game",
+      en: "A Forced Game",
       jp: "ムリゲー",
       "en-romaji": "Murigē",
     },
@@ -44,7 +44,7 @@ export const MANGA = defineRecord<Manga>()({
     type: "series",
     date: { year: 2010, month: 2, day: 8, certainty: "=" },
     dateProof: {
-      en: "The image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/1.jpg), have a modified date of February 8, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=15790) dated 18 February 2010, so it must have been public before then.",
+      en: "The image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/1.jpg), have a modified date of February 8, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=15790) dated 18 February 2010, so it must have been public before then. At the end of the manga, it says that the published date was [1/31~](http://namakuriimu.web.fc2.com/index2.html) (as in around the 31st of January) so that might be a better date than the one I've used here.",
     },
     jpLink: "http://namakuriimu.web.fc2.com/",
     published: "self-published",
@@ -55,7 +55,7 @@ export const MANGA = defineRecord<Manga>()({
       jp: "https://www.shonenjump.com/jisedai_manga/publication.html",
     },
     note: {
-      en: "This won the first [JUMP Next Generation Grand Prix](https://www.shonenjump.com/jisedai_manga/publication.html).",
+      en: "This won the first [JUMP Next Generation Grand Prix](https://www.shonenjump.com/jisedai_manga/publication.html).\n\nThe English translation of the title comes from the [end](http://namakuriimu.web.fc2.com/index2.html) of the manga itself.",
     },
   },
   pantz: {

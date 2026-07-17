@@ -305,6 +305,22 @@ export const MANGA = defineRecord<Manga>()({
     },
     published: "published",
   },
+  alien: {
+    name: {
+      en: "Grave of the Fireflies VS Alien",
+      jp: "火垂るの墓VSエイリアン",
+      "en-romaji": "Hotaru no Haka VS Eirian"
+    },
+    alias: "hanako",
+    date: { year: 2012, certainty: "?" },
+    dateProof: {
+      en: "[This thread dedicated to Nagato Is Me](https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html) placed the work at Nagato Is Me's 2nd university year, whereas Tetteleposan and Chicken were placed at his first.",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "It's listed in [this thread dedicated to Nagato Is Me](https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html). Unfortunately, there is no link given.",
+    }
+  },
   fukushuu: {
     name: {
       en: "Sword of Revenge",

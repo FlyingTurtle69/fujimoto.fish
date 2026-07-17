@@ -73,6 +73,15 @@ export const ALIASES = defineRecord<Alias>()({
       },
     ],
   },
+  hanako: {
+    name: { en: "Hanako Oku", jp: "奥華子", "en-romaji": "Oku Hanako" },
+    description: {
+      en: "The name Fujimoto went by for Grave of the Fireflies VS Alien. This is also the name of a Japanese pop singer."
+    },
+    fujimotoProof: {
+      en: "Mentioned in [this Neetsha thread dedicated to Nagato Is Me](https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html)."
+    }
+  },
   nim: {
     name: { en: "NIM", jp: "ＮＩＭ" },
     description: {

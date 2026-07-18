@@ -1,18 +1,34 @@
 ---
 import { MANGA } from "@/content/manga";
 import NamakuriimuLayout from "@/layouts/NamakuriimuLayout.astro";
-import { displayWord, LOCALES } from "@/locale";
+import { displayWord, LOCALES, type Word } from "@/locale";
 import { objectMap } from "@/utils/object";
 import { Image } from "astro:assets";
 import { getPage } from "@/utils/image";
 
 export function getStaticPaths() {
-  return objectMap(LOCALES, ([locale]) => ({ params: { locale } }));
+  return objectMap(LOCALES, ([locale]) => locale).flatMap((locale) =>
+    ["1", "2"].map((chapter) => ({ params: { locale, chapter } })),
+  );
 }
 
-const locale = Astro.params.locale;
+const { locale, chapter } = Astro.params;
 
-const title = displayWord(MANGA.pasokon.name, locale);
+const COMMENTS: Word[] = [
+  {
+    jp: "コメント、ＦＡくれるとモチベーションあがります。",
+    en: "If you comment or make fanart, I'll be more motivated.",
+  },
+  {
+    jp: "次の話で種明かし。",
+    en: "All will be revealed in the next chapter.",
+  },
+];
+
+const chap = parseInt(chapter);
+const pages = [11, 21][chap - 1];
+
+const title = displayWord([MANGA.pasokon.name, MANGA.pasokon.chapters![1].name][chap - 1], locale);
 ---
 
 <NamakuriimuLayout title={title}>
@@ -24,27 +40,19 @@ const title = displayWord(MANGA.pasokon.name, locale);
     <div id="manga">
       <h1>{title}</h1>
       {
-        [...Array(11).keys()].map((i) => (
+        [...Array(pages).keys()].map((i) => (
           <>
             <>
               <br />
               <div class="center">
-                <Image src={getPage("pasokon", 1, i + 1, locale)!} alt={`Page ${i + 1}`} />
+                <Image src={getPage("pasokon", chap, i + 1, locale)!} alt={`Page ${i + 1}`} />
               </div>
               <br />
             </>
           </>
         ))
       }
-      {
-        displayWord(
-          {
-            jp: "コメント、ＦＡくれるとモチベーションあがります。",
-            en: "If you comment or make fanart, I'll be more motivated.",
-          },
-          locale,
-        )
-      }
+      {displayWord(COMMENTS[chap - 1], locale)}
       <!-- Neetel_Inside_Comment -->
       <form
         action="http://neetsha.com/inside/comment.php"

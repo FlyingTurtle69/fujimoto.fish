@@ -243,6 +243,28 @@ export const MANGA = defineRecord<Manga>()({
       en: "https://anilist.co/manga/133945/Tetteleposan",
     },
     published: "self-published",
+    chapters: [
+      {
+        name: { jp: "第一話", en: "Chapter 1" },
+        mokuro: "テッテレポサンヌ 第1話",
+      },
+      {
+        name: { jp: "第二話", en: "Chapter 2" },
+        mokuro: "テッテレポサンヌ 第2話",
+      },
+      {
+        name: { jp: "第三話", en: "Chapter 3" },
+        mokuro: "テッテレポサンヌ 第3話",
+      },
+      {
+        name: { jp: "第四話", en: "Chapter 4" },
+        mokuro: "テッテレポサンヌ 第4話",
+      },
+      {
+        name: { jp: "第五話", en: "Chapter 5" },
+        mokuro: "テッテレポサンヌ 第5話",
+      },
+    ],
   },
   mahoujo: {
     name: {

@@ -152,7 +152,7 @@ export const MANGA = defineRecord<Manga>()({
   },
   ashitasen: {
     name: {
-      en: "Tomorrow War",
+      en: "Tomorrow, War",
       jp: "明日戦",
       "en-romaji": "Ashitasen",
     },
@@ -166,9 +166,9 @@ export const MANGA = defineRecord<Manga>()({
       en: "It's listed on [one of Fujimoto's websites](http://nagatoisme.web.fc2.com/sonota.html). Unfortunately, the link to it is now dead.",
     },
     note: {
-      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.",
+      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nThis [post](https://zhuanlan.zhihu.com/p/676829790) in Chinese claims that the full title is 《明日，在战火燃起之星》, which Google Translate says means 'Tomorrow, on the Star Where War Ignites'. Unfortunately, the post does not provide the Japanese title, nor where they got this information from.",
       "en-romaji":
-        "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nI'm very unsure if the rōmaji of the title is correct.",
+        "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nI'm very unsure if the rōmaji of the title is correct.\n\nThis [post](https://zhuanlan.zhihu.com/p/676829790) in Chinese claims that the full title is 《明日，在战火燃起之星》, which Google Translate says means 'Tomorrow, on the Star Where War Ignites'. Unfortunately, the post does not provide the Japanese title, nor where they got this information from.",
     },
   },
   ac: {

@@ -477,6 +477,26 @@ export const MANGA = defineRecord<Manga>()({
     },
     published: "published",
   },
+  ninchishou: {
+    name: {
+      en: "Diary Manga for the Prevention of Dementia",
+      jp: "認知症防止目的日記漫画",
+      "en-romaji": "Ninchishō Bōshi Mokuteki Nikki Manga",
+    },
+    alias: "nagato",
+    type: "series",
+    date: { year: 2014, month: 9, day: 29, certainty: "=" },
+    dateProof: {
+      en: "Last updated date on this [Neetsha](https://web.archive.org/web/20150402080749/https://neetsha.jp/inside/comic.php?id=16884) archive. This is probably not the date that the first chapter was published.",
+    },
+    existenceProof: {
+      en: "There's an archive [here](https://web.archive.org/web/20150402080749/https://neetsha.jp/inside/comic.php?id=16884) and Nagato is listed as the author, although the links to actually read the manga were not archived. There's also [this website](http://nkng.blog.fc2.com/?pc) where someone posted fanart that Nagato drew for them, and they mention that _Diary Manga for the Prevention of Dementia_ is currently being serialised by him.",
+    },
+    note: {
+      en: "You can see fanart of it [here](https://neetsha.jp/oekaki/log/?bbs=6&res=6026).",
+    },
+    published: "unpublished",
+  },
   ningyo: {
     name: { en: "Mermaid Rhapsody", jp: "人魚ラプソディ", "en-romaji": "Ningyo Rapusodi" },
     alias: "fujimoto",

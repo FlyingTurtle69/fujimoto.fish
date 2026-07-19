@@ -48,8 +48,8 @@ export const ALIASES = defineRecord<Alias>()({
       },
       {
         name: "Neetsha Oekaki",
-        link: "https://www.neetsha.jp/oekaki/log/",
-        explanation: 'Search "長門は俺" to find posts by Fujimoto and posts talking about him',
+        link: "https://neetsha.jp/oekaki/log/?w=%E9%95%B7%E9%96%80%E3%81%AF%E4%BF%BA",
+        explanation: "Posts by Fujimoto and posts talking about him",
       },
       {
         name: "Neetsha Wiki",

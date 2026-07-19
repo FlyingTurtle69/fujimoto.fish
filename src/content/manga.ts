@@ -437,6 +437,30 @@ export const MANGA = defineRecord<Manga>()({
     },
     published: "published",
   },
+  onnanoyamai: {
+    name: {
+      en: "Woke-Up-as-a-Girl Syndrome",
+      jp: "目が覚めたら女の子になっていた病",
+      "en-romaji": "Me ga Sametara Onnanoko ni Natteita Yamai",
+    },
+    alias: "fujimoto",
+    type: "one-shot",
+    date: { year: 2014, month: 2, day: 5, certainty: "=" },
+    dateProof: {
+      en: "Last updated date where it was originally [uploaded](https://web.archive.org/web/20160723114659/http://neetsha.jp/inside/comic.php?id=15970). This was also published, under the name Fujimoto and including the last page, on [Shonen Jump+](https://shonenjumpplus.com/episode/13932016480028864148) on 24 April, 2017.",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/13932016480028864148",
+    summary: {
+      jp: "ある日の朝、目を覚ましたトシヒデは、自分が女の子になっていることに気づく。慌てて病院に駆け込むが、「目が覚めたら女の子になっていた病」だと診断され、治ることはないという。登校したトシヒデは、クラスメートの好奇の目にさらされ、中には「セックスさせろ」とまで言うやつもいた。クラス中から陰湿ないじめにあっていたところ、上級生のアキラが現れる。アキラはいじめを行う男子をぶん殴り、トシヒデを救う。アキラのことを異性としてカッコイイと感じたトシヒデは困ってしまう。アキラは、トシヒデの彼女、リエの兄なのだ。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
+    },
+    note: {
+      en: "This was actually originally self-published under the name NagatoIsMe [here](https://web.archive.org/web/20160723114659/http://neetsha.jp/inside/comic.php?id=15970). The link with the actual pages is [here](https://web.archive.org/web/20160712052231/http://neetsha.jp/inside/comic.php?id=15970&story=1). The title of the manga on the website was _Manga that you can't read to the end because there was a problem with storage capacity_, though on the first page it had the normal title. Fujimoto references this problem with not being able to upload the full manga in his comment on this work in _Tatsuki Fujimoto Before Chainsaw Man: 22-26._ The only page missing was the last one.",
+    },
+    published: "published",
+  },
   shikaku: {
     name: { en: "Shikaku", jp: "シカク", "en-romaji": "Shikaku" },
     alias: "fujimoto",
@@ -527,27 +551,6 @@ export const MANGA = defineRecord<Manga>()({
     note: {
       en: 'I don\'t think there is an official name for this. The name I chose here is based off of the caption of the tweet this was posted in. The caption was "This is a manga my brother drew in his free time."',
     },
-  },
-  onnanoyamai: {
-    name: {
-      en: "Woke-Up-as-a-Girl Syndrome",
-      jp: "目が覚めたら女の子になっていた病",
-      "en-romaji": "Me ga Sametara Onnanoko ni Natteita Yamai",
-    },
-    alias: "fujimoto",
-    type: "one-shot",
-    date: { year: 2017, month: 4, day: 24, certainty: "=" },
-    dateProof: {
-      en: "Published date on [Shonen Jump+](https://shonenjumpplus.com/episode/13932016480028864148).",
-    },
-    jpLink: "https://shonenjumpplus.com/episode/13932016480028864148",
-    summary: {
-      jp: "ある日の朝、目を覚ましたトシヒデは、自分が女の子になっていることに気づく。慌てて病院に駆け込むが、「目が覚めたら女の子になっていた病」だと診断され、治ることはないという。登校したトシヒデは、クラスメートの好奇の目にさらされ、中には「セックスさせろ」とまで言うやつもいた。クラス中から陰湿ないじめにあっていたところ、上級生のアキラが現れる。アキラはいじめを行う男子をぶん殴り、トシヒデを救う。アキラのことを異性としてカッコイイと感じたトシヒデは困ってしまう。アキラは、トシヒデの彼女、リエの兄なのだ。",
-    },
-    summarySource: {
-      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
-    },
-    published: "published",
   },
   imoutonoane: {
     name: { en: "Sisters", jp: "妹の姉", "en-romaji": "Imōto no Ane" },

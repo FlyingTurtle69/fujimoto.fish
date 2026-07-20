@@ -36,7 +36,7 @@ export type Manga = UnpublishedManga | PublishedManga;
 export const MANGA = defineRecord<Manga>()({
   murige: {
     name: {
-      en: "Impossible Game",
+      en: "A Forced Game",
       jp: "ムリゲー",
       "en-romaji": "Murigē",
     },
@@ -44,7 +44,7 @@ export const MANGA = defineRecord<Manga>()({
     type: "series",
     date: { year: 2010, month: 2, day: 8, certainty: "=" },
     dateProof: {
-      en: "The image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/1.jpg), have a modified date of February 8, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=15790) dated 18 February 2010, so it must have been public before then.",
+      en: "The image files of the first chapter, such as [this one](http://namakuriimu.web.fc2.com/1.jpg), have a modified date of February 8, 2010 (Note that I think this modified date won't be there if you download normally. I think you need to use a tool like `wget`). There is also [fanart](https://www.neetsha.jp/oekaki/log/?bbs=3&res=15790) dated 18 February 2010, so it must have been public before then. At the end of the manga, it says that the published date was [1/31~](http://namakuriimu.web.fc2.com/index2.html) (as in around the 31st of January) so that might be a better date than the one I've used here.",
     },
     jpLink: "http://namakuriimu.web.fc2.com/",
     published: "self-published",
@@ -55,7 +55,7 @@ export const MANGA = defineRecord<Manga>()({
       jp: "https://www.shonenjump.com/jisedai_manga/publication.html",
     },
     note: {
-      en: "This won the first [JUMP Next Generation Grand Prix](https://www.shonenjump.com/jisedai_manga/publication.html).",
+      en: "This won the first [JUMP Next Generation Grand Prix](https://www.shonenjump.com/jisedai_manga/publication.html).\n\nThe English translation of the title comes from the [end](http://namakuriimu.web.fc2.com/index2.html) of the manga itself.",
     },
   },
   pantz: {
@@ -63,12 +63,11 @@ export const MANGA = defineRecord<Manga>()({
     alias: "nagato",
     date: { year: 2010, certainty: "?" },
     dateProof: {
-      // Archive of the Google search: https://web.archive.org/web/20260629233910/https://www.google.com/search?q=%22%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E7%A7%81%E3%81%AF%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%22&sxsrf=APpeQntRoLJO1Ri7V3DVhSRlOEL6240f_Q%3A1781972411206&sei=HgJDauSNApGrur8P0aW_8A4
-      en: "[This](https://www.google.com/search?q=%22%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E7%A7%81%E3%81%AF%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%22&sxsrf=APpeQntRoLJO1Ri7V3DVhSRlOEL6240f_Q%3A1781972411206) Google search has the following snippet from the NeetshaWiki page for NagatoIsMe: 「長門は俺は新都社のヤング作家・少年作家・コニー作家。 作品. ムリゲー(完結) PANTZ(完結) 艦蹴り(完結) それでも私はレビューを始めるのだろう」. This is listing _Impossible Game_, _PANTZ_, _Warship Kick_ and _Even so, I Suppose I'll Start the Review_ as works that NagatoIsMe made. Besides PANTZ, these are all in chronological order. If we assume that PANTZ is also ordered chronologically, then it must have been made in 2010, sometime between February and August.\n\nThis [comment](https://neetsha.jp/inside/comment.php?id=10915&limit=1000#comment_410448) asking why PANTZ was deleted was posted on 26 May 2011, so at the very least we know it must have been older than that.",
+      en: "The [Neetsha Wiki](https://web.archive.org/web/20160422192139/http://wiki.neetsha.jp/index.php/%E9%95%B7%E9%96%80%E3%81%AF%E4%BF%BA) lists the following as works by NagatoIsMe: _A Forced Game_, _PANTZ_, _Warship Kick_, _Even so, I Suppose I'll Start the Review_ and _NagatoIsMe Short Story Collection_. Besides PANTZ, these are all in chronological order (if using the dates when they ended). If we assume that PANTZ is also ordered chronologically, then it must have been made in 2010, sometime between February and August.\n\nThis [comment](https://neetsha.jp/inside/comment.php?id=10915&limit=1000#comment_410448) asking why PANTZ was deleted was posted on 26 May 2011, so at the very least we know it must have been older than that.",
     },
     published: "unpublished",
     existenceProof: {
-      en: "It appears in [this](https://www.google.com/search?q=%22%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E7%A7%81%E3%81%AF%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%22&sxsrf=APpeQntRoLJO1Ri7V3DVhSRlOEL6240f_Q%3A1781972411206) Google search snippet for the NeetshaWiki page for NagatoIsMe, listing works by him. Unfortunately, the original page no longer exists. There is also a comment [here](https://neetsha.jp/inside/comment.php?id=10915&limit=1000#comment_410448) asking why PANTZ was deleted.",
+      en: "The [Neetsha Wiki](https://web.archive.org/web/20160422192139/http://wiki.neetsha.jp/index.php/%E9%95%B7%E9%96%80%E3%81%AF%E4%BF%BA) article on NagatoIsMe listed PANTZ as one of his works. There is also a comment [here](https://neetsha.jp/inside/comment.php?id=10915&limit=1000#comment_410448) asking why PANTZ was deleted.",
     },
   },
   kankeri: {
@@ -153,7 +152,7 @@ export const MANGA = defineRecord<Manga>()({
   },
   ashitasen: {
     name: {
-      en: "Tomorrow War",
+      en: "Tomorrow, War",
       jp: "明日戦",
       "en-romaji": "Ashitasen",
     },
@@ -167,9 +166,9 @@ export const MANGA = defineRecord<Manga>()({
       en: "It's listed on [one of Fujimoto's websites](http://nagatoisme.web.fc2.com/sonota.html). Unfortunately, the link to it is now dead.",
     },
     note: {
-      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.",
+      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nThis [post](https://zhuanlan.zhihu.com/p/676829790) in Chinese claims that the full title is 《明日，在战火燃起之星》, which Google Translate says means 'Tomorrow, on the Star Where War Ignites'. Unfortunately, the post does not provide the Japanese title, nor where they got this information from.",
       "en-romaji":
-        "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nI'm very unsure if the rōmaji of the title is correct.",
+        "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nI'm very unsure if the rōmaji of the title is correct.\n\nThis [post](https://zhuanlan.zhihu.com/p/676829790) in Chinese claims that the full title is 《明日，在战火燃起之星》, which Google Translate says means 'Tomorrow, on the Star Where War Ignites'. Unfortunately, the post does not provide the Japanese title, nor where they got this information from.",
     },
   },
   ac: {
@@ -243,6 +242,28 @@ export const MANGA = defineRecord<Manga>()({
       en: "https://anilist.co/manga/133945/Tetteleposan",
     },
     published: "self-published",
+    chapters: [
+      {
+        name: { jp: "第一話", en: "Chapter 1" },
+        mokuro: "テッテレポサンヌ 第1話",
+      },
+      {
+        name: { jp: "第二話", en: "Chapter 2" },
+        mokuro: "テッテレポサンヌ 第2話",
+      },
+      {
+        name: { jp: "第三話", en: "Chapter 3" },
+        mokuro: "テッテレポサンヌ 第3話",
+      },
+      {
+        name: { jp: "第四話", en: "Chapter 4" },
+        mokuro: "テッテレポサンヌ 第4話",
+      },
+      {
+        name: { jp: "第五話", en: "Chapter 5" },
+        mokuro: "テッテレポサンヌ 第5話",
+      },
+    ],
   },
   mahoujo: {
     name: {
@@ -431,6 +452,30 @@ export const MANGA = defineRecord<Manga>()({
     },
     published: "published",
   },
+  onnanoyamai: {
+    name: {
+      en: "Woke-Up-as-a-Girl Syndrome",
+      jp: "目が覚めたら女の子になっていた病",
+      "en-romaji": "Me ga Sametara Onnanoko ni Natteita Yamai",
+    },
+    alias: "fujimoto",
+    type: "one-shot",
+    date: { year: 2014, month: 2, day: 5, certainty: "=" },
+    dateProof: {
+      en: "Last updated date where it was originally [uploaded](https://web.archive.org/web/20160723114659/http://neetsha.jp/inside/comic.php?id=15970). This was also published, under the name Fujimoto and including the last page, on [Shonen Jump+](https://shonenjumpplus.com/episode/13932016480028864148) on 24 April, 2017.",
+    },
+    jpLink: "https://shonenjumpplus.com/episode/13932016480028864148",
+    summary: {
+      jp: "ある日の朝、目を覚ましたトシヒデは、自分が女の子になっていることに気づく。慌てて病院に駆け込むが、「目が覚めたら女の子になっていた病」だと診断され、治ることはないという。登校したトシヒデは、クラスメートの好奇の目にさらされ、中には「セックスさせろ」とまで言うやつもいた。クラス中から陰湿ないじめにあっていたところ、上級生のアキラが現れる。アキラはいじめを行う男子をぶん殴り、トシヒデを救う。アキラのことを異性としてカッコイイと感じたトシヒデは困ってしまう。アキラは、トシヒデの彼女、リエの兄なのだ。",
+    },
+    summarySource: {
+      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
+    },
+    note: {
+      en: "This was actually originally self-published under the name NagatoIsMe [here](https://web.archive.org/web/20160723114659/http://neetsha.jp/inside/comic.php?id=15970). The link with the actual pages is [here](https://web.archive.org/web/20160712052231/http://neetsha.jp/inside/comic.php?id=15970&story=1). The title of the manga on the website was _Manga that you can't read to the end because there was a problem with storage capacity_, though on the first page it had the normal title. Fujimoto references this problem with not being able to upload the full manga in his comment on this work in _Tatsuki Fujimoto Before Chainsaw Man: 22-26._ The only page missing was the last one.",
+    },
+    published: "published",
+  },
   shikaku: {
     name: { en: "Shikaku", jp: "シカク", "en-romaji": "Shikaku" },
     alias: "fujimoto",
@@ -447,6 +492,26 @@ export const MANGA = defineRecord<Manga>()({
       jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8617%E2%88%9221-rsxqktseu#SCT1",
     },
     published: "published",
+  },
+  ninchishou: {
+    name: {
+      en: "Diary Manga for the Prevention of Dementia",
+      jp: "認知症防止目的日記漫画",
+      "en-romaji": "Ninchishō Bōshi Mokuteki Nikki Manga",
+    },
+    alias: "nagato",
+    type: "series",
+    date: { year: 2014, month: 9, day: 29, certainty: "=" },
+    dateProof: {
+      en: "Last updated date on this [Neetsha](https://web.archive.org/web/20150402080749/https://neetsha.jp/inside/comic.php?id=16884) archive. This is probably not the date that the first chapter was published.",
+    },
+    existenceProof: {
+      en: "There's an archive [here](https://web.archive.org/web/20150402080749/https://neetsha.jp/inside/comic.php?id=16884) and Nagato is listed as the author, although the links to actually read the manga were not archived. There's also [this website](http://nkng.blog.fc2.com/?pc) where someone posted fanart that Nagato drew for them, and they mention that _Diary Manga for the Prevention of Dementia_ is currently being serialised by him.",
+    },
+    note: {
+      en: "You can see fanart of it [here](https://neetsha.jp/oekaki/log/?bbs=6&res=6026).",
+    },
+    published: "unpublished",
   },
   ningyo: {
     name: { en: "Mermaid Rhapsody", jp: "人魚ラプソディ", "en-romaji": "Ningyo Rapusodi" },
@@ -521,27 +586,6 @@ export const MANGA = defineRecord<Manga>()({
     note: {
       en: 'I don\'t think there is an official name for this. The name I chose here is based off of the caption of the tweet this was posted in. The caption was "This is a manga my brother drew in his free time."',
     },
-  },
-  onnanoyamai: {
-    name: {
-      en: "Woke-Up-as-a-Girl Syndrome",
-      jp: "目が覚めたら女の子になっていた病",
-      "en-romaji": "Me ga Sametara Onnanoko ni Natteita Yamai",
-    },
-    alias: "fujimoto",
-    type: "one-shot",
-    date: { year: 2017, month: 4, day: 24, certainty: "=" },
-    dateProof: {
-      en: "Published date on [Shonen Jump+](https://shonenjumpplus.com/episode/13932016480028864148).",
-    },
-    jpLink: "https://shonenjumpplus.com/episode/13932016480028864148",
-    summary: {
-      jp: "ある日の朝、目を覚ましたトシヒデは、自分が女の子になっていることに気づく。慌てて病院に駆け込むが、「目が覚めたら女の子になっていた病」だと診断され、治ることはないという。登校したトシヒデは、クラスメートの好奇の目にさらされ、中には「セックスさせろ」とまで言うやつもいた。クラス中から陰湿ないじめにあっていたところ、上級生のアキラが現れる。アキラはいじめを行う男子をぶん殴り、トシヒデを救う。アキラのことを異性としてカッコイイと感じたトシヒデは困ってしまう。アキラは、トシヒデの彼女、リエの兄なのだ。",
-    },
-    summarySource: {
-      jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8622%E2%88%9226-9laykf5in",
-    },
-    published: "published",
   },
   imoutonoane: {
     name: { en: "Sisters", jp: "妹の姉", "en-romaji": "Imōto no Ane" },

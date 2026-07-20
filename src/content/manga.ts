@@ -186,7 +186,7 @@ export const MANGA = defineRecord<Manga>()({
       en: "It's listed on [one of Fujimoto's websites](http://nagatoisme.web.fc2.com/sonota.html). Unfortunately, the link to it is now dead.",
     },
     note: {
-      en: "The title is llisted on this [page](http://nagatoisme.web.fc2.com/sonota.html) as AC; based on this [manga](https://pierrot.fool.jp/comic/nounaioff/n4.html) where an incomplete list of works by NagatoIsMe was included, _AC_ is actually its full title. The same manga also claimed that _AC_ was a one-shot work.",
+      en: "The title is listed on this [page](http://nagatoisme.web.fc2.com/sonota.html) as AC; based on this [manga](https://pierrot.fool.jp/comic/nounaioff/n4.html) where an incomplete list of works by NagatoIsMe was included, _AC_ is actually its full title. The same manga also claimed that _AC_ was a one-shot work.",
     },
   },
   densetsu: {

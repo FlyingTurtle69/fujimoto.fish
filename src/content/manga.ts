@@ -152,11 +152,12 @@ export const MANGA = defineRecord<Manga>()({
   },
   ashitasen: {
     name: {
-      en: "Tomorrow, War",
-      jp: "明日戦",
-      "en-romaji": "Ashitasen",
+      en: "Tomorrow, on the Planet where War Commences",
+      jp: "明日、戦争がおこる星で",
+      "en-romaji": "Ashita, Sensō ga Okoru Hoshi de",
     },
     alias: "nagato",
+    type: "one-shot",
     date: { year: 2011, certainty: "?" },
     dateProof: {
       en: "The manga that we know the dates of on [this page](http://nagatoisme.web.fc2.com/sonota.html) appear to be in chronological order. If the ones we don't know the dates of are as well, then that would mean this manga came out in late 2010 or early 2011.",
@@ -166,9 +167,7 @@ export const MANGA = defineRecord<Manga>()({
       en: "It's listed on [one of Fujimoto's websites](http://nagatoisme.web.fc2.com/sonota.html). Unfortunately, the link to it is now dead.",
     },
     note: {
-      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nThis [post](https://zhuanlan.zhihu.com/p/676829790) in Chinese claims that the full title is 《明日，在战火燃起之星》, which Google Translate says means 'Tomorrow, on the Star Where War Ignites'. Unfortunately, the post does not provide the Japanese title, nor where they got this information from.",
-      "en-romaji":
-        "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.\n\nI'm very unsure if the rōmaji of the title is correct.\n\nThis [post](https://zhuanlan.zhihu.com/p/676829790) in Chinese claims that the full title is 《明日，在战火燃起之星》, which Google Translate says means 'Tomorrow, on the Star Where War Ignites'. Unfortunately, the post does not provide the Japanese title, nor where they got this information from.",
+      en: "The title is shortened on this [page](http://nagatoisme.web.fc2.com/sonota.html) as 明日戦; the full title can be seen in this [manga](https://pierrot.fool.jp/comic/nounaioff/n4.html) where an incomplete list of works by NagatoIsMe was included. The same manga also claimed that _Tomorrow, on the Planet where War Commences_ was a one-shot work."
     },
   },
   ac: {
@@ -177,6 +176,7 @@ export const MANGA = defineRecord<Manga>()({
       jp: "ＡＣ",
     },
     alias: "nagato",
+    type: "one-shot",
     date: { year: 2011, certainty: "?" },
     dateProof: {
       en: "The manga that we know the dates of on [this page](http://nagatoisme.web.fc2.com/sonota.html) appear to be in chronological order. If the ones we don't know the dates of are as well, then that would mean this manga came out in late 2010 or early 2011.",
@@ -186,7 +186,7 @@ export const MANGA = defineRecord<Manga>()({
       en: "It's listed on [one of Fujimoto's websites](http://nagatoisme.web.fc2.com/sonota.html). Unfortunately, the link to it is now dead.",
     },
     note: {
-      en: "The title is likely not the full title. The [page](http://nagatoisme.web.fc2.com/sonota.html) that I got the title from uses shortenings for most of the manga titles, so this title is likely a shortening too.",
+      en: "The title is listed on this [page](http://nagatoisme.web.fc2.com/sonota.html) as AC; based on this [manga](https://pierrot.fool.jp/comic/nounaioff/n4.html) where an incomplete list of works by NagatoIsMe was included, _AC_ is actually its full title. The same manga also claimed that _AC_ was a one-shot work.",
     },
   },
   densetsu: {
@@ -325,6 +325,22 @@ export const MANGA = defineRecord<Manga>()({
       jp: "https://mangapedia.com/%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%E7%9F%AD%E7%B7%A8%E9%9B%8617%E2%88%9221-rsxqktseu#SCT1",
     },
     published: "published",
+  },
+  alien: {
+    name: {
+      en: "Grave of the Fireflies VS Alien",
+      jp: "火垂るの墓VSエイリアン",
+      "en-romaji": "Hotaru no Haka VS Eirian"
+    },
+    alias: "nagato",
+    date: { year: 2012, certainty: "?" },
+    dateProof: {
+      en: "A Neetsha BBS [thread](https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html) dedicated to NagatoIsMe placed the work at NagatoIsMe's 2nd university year, whereas _Tetteleposan_ and _A Couple Clucking Chickens_ were placed at his first.",
+    },
+    published: "unpublished",
+    existenceProof: {
+      en: "Listed in a Neetsha BBS [thread](https://bbs.neetsha.jp/board/kako/1344/13446/1344690628.html) dedicated to NagatoIsMe. The thread also mentioned \"a lifestyle shift from Koike Teppei to Oku Hanako\", with Koike Teppei was and Oku Hanako both being famed Japanese singers; this might refer to a Twitter profile picture change (@NagatoIsMe once used a photo of Koike Teppei as his profile picture, which can be seen from this [manga](https://pierrot.fool.jp/comic/nounaioff/n4.html)) or an alias change, but no further evidence have been found for either possibility for now. Also mentioned in a 5ch thread (archived [here](https://kako.5ch.io/test/read.cgi/wcomic/1468548781/)) dedicated to _Fire Punch_.",
+    }
   },
   fukushuu: {
     name: {

@@ -15,37 +15,35 @@ interface Props {
 const { manga, locale } = Astro.props;
 ---
 
-<table class="table">
-  <tbody>
-    {
-      manga.map((id) => {
-        const m = MANGA[id];
-        const cover = getCover(id, locale);
-        return (
-          <tr class="hover:bg-base-300 relative">
-            <td>
-              <a
-                href={`/${locale}/manga/${id}`}
-                class="absolute inset-0"
-                aria-label={displayWord(m.name, locale)}
-              />
+<ul class="w-full text-left text-sm">
+  {
+    manga.map((id) => {
+      const m = MANGA[id];
+      const cover = getCover(id, locale);
+      return (
+        <li class="border-base-content/5 border-b last:border-b-0">
+          <a
+            href={`/${locale}/manga/${id}`}
+            class="hover:bg-base-300 grid grid-cols-[4rem_minmax(0,1fr)_auto] items-center gap-x-5 px-4 py-3"
+          >
+            <div>
               {cover && (
                 <Image src={cover} alt="" height={200} class="mx-auto h-20 w-auto max-w-none" />
               )}
-            </td>
-            <td>
+            </div>
+            <div>
               <h3 class="font-bold">{displayWord(m.name, locale)}</h3>
               <div>{displayAlias(m.alias, locale)}</div>
-            </td>
-            <td>
+            </div>
+            <div>
               <div class="flex justify-center">
                 <PublishedBadge manga={m} className="text-nowrap" />
               </div>
               <div class="text-center text-nowrap">{displayDate(m.date, locale)}</div>
-            </td>
-          </tr>
-        );
-      })
-    }
-  </tbody>
-</table>
+            </div>
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>
